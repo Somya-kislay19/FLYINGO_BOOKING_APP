@@ -1,0 +1,125 @@
+.bo {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+margin-top: 2%;    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.checkout-pagep {
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #003580 0%, #e0f0ff 50%, #fff 100%);
+
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 8%;
+
+}
+
+.checkout-pagep h1 {
+    text-align: center;
+    color: #003580;
+    padding-top: 250px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.checkout-pagep h2 {
+    color: #003580;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.checkout-pagep ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checkout-pagep li {
+    background-color: #e0f0ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 200px;
+
+}
+
+.checkout-pagep li:nth-child(odd) {
+    background-color: #cce0ff;
+    padding: 10px;
+    padding-left: 200px;
+
+
+}
+
+.seat-label {
+    margin-right: 20px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.seat-number {
+    flex-shrink: 0;
+    padding-right: 300px;
+}
+
+.checkout-pagep button {
+    background-color: #003580;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.checkout-pagep button:hover {
+    background-color: #0056b3;
+}
+
+.checkout-pagep p {
+    margin: 5px 0;
+    color:  #154477;
+    font-weight: 600;
+    font-size: larger;
+}
+
+@media (max-width: 600px) {
+    .checkout-page {
+        padding: 10px;
+    }
+
+    .checkout-page button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.qr-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.checkout-pagep h2 {
+    text-align: center;
+    color: #003580;
+    margin-top: 20px;
+}
+
+.checkout-pagep button {
+    margin-top: 20px;
+}

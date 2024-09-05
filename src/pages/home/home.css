@@ -1,0 +1,20 @@
+.homeContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px; /* Added padding to avoid content touching the edges */
+}
+
+.homeTitle {
+    width: 100%; /* Changed to 100% to ensure it uses the full width of its container */
+    max-width: 1024px; /* Maintains max-width as specified */
+    font-size: 24px; /* Adjusted font size for better visibility */
+    text-align: center; /* Center align the title text */
+}
+
+/* Specific styles for the second title */
+.homeTitle:nth-of-type(2) {
+    margin-top: 80px; /* Increased margin-top to move the title further down */
+}

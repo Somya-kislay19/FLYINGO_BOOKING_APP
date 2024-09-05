@@ -1,0 +1,135 @@
+.header{
+    background-image: linear-gradient(to top,   #3b3db6c5,  #05234e);
+    color:white;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    position: relative;
+    
+}
+
+.headerContainer{
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0px 100px 0px;
+}
+
+.headerList{
+    display: flex;
+    gap: 40px;
+    color: #fcfaf5;
+
+}
+
+.headerListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerListItem.active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+
+
+}
+
+.headerDesc{
+    margin: 20px 0px;
+    color: #fcfaf5;
+}
+
+.headerBtn{
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    padding-right: 10px;
+    z-index: 2;
+    gap: 10px;
+    
+
+
+}
+
+.headerSearch{
+    height: 30px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding:10px 0px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+    z-index: 2;
+
+
+
+
+
+}
+
+.headerIcon{
+    color: lightgray;
+    padding-left: 15px;
+}
+
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top:;
+
+}
+
+.headerSearchInput{
+    border: none;
+    outline: none;
+    padding-left: 10px;
+
+}
+
+.headerSearchText{
+    color:lightgrey;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.date{
+    position: absolute;
+    top:50;
+    z-index: 2;
+    
+}
+
+.option{
+    z-index: 2;
+
+    position: relative;
+    top: 50px;
+    background-color: rgb(13, 10, 10);
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+}
+.headerTitle span {
+    background-clip: text;
+    font-size: 75px;
+    font-weight: bold;
+    background-image: linear-gradient(to right,  #ad488ab2, #e455addc);
+    color: transparent;
+  }
+
+.headerTitle{
+    color: #fcfaf5;
+
+}

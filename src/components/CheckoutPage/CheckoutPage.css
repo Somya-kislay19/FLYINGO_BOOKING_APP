@@ -1,0 +1,98 @@
+.bo {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-page {
+    max-width: 800px;
+    margin-top: 50px;
+    
+    padding: 20px;
+    padding-top: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8%;
+    background: linear-gradient(135deg, #003580 0%, #e0f0ff 50%, #fff 100%);
+
+    flex: 1;
+}
+
+.checkout-page h1 {
+    text-align: center;
+    color: #003580;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.checkout-page h2 {
+    color: #003580;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.checkout-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checkout-page li {
+    background-color: #e0f0ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.checkout-page li:nth-child(odd) {
+    background-color: #cce0ff;
+    padding-left: 30px;
+}
+
+.checkout-page button {
+    background-color: #003580;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.checkout-page button:hover {
+    background-color: #0056b3;
+}
+
+.checkout-page p {
+    color: #003580;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.user-details {
+    display: flex;
+    gap: 20px; /* Adjust the gap value as needed */
+    flex-wrap: wrap; /* Ensures elements wrap to a new line if necessary */
+}
+
+@media (max-width: 600px) {
+    .checkout-page {
+        padding: 10px;
+    }
+
+    .checkout-page button {
+        width: 100%;
+        padding: 10px;
+    }
+}

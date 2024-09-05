@@ -1,0 +1,45 @@
+.featured {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .featuredItem {
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1; /* Ensure all items take equal space */
+    height: 250px; /* Ensure all items have the same height */
+  }
+  .bb{
+    background-color: rgba(250, 235, 215, 0.079);
+    border: none;
+  }
+  
+  .featuredImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining its aspect ratio */
+  }
+  
+  .featuredTitles {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .featuredTitles h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .featuredTitles h2 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+  }
+  

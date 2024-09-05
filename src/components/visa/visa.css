@@ -1,0 +1,141 @@
+.bg {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .visa-container {
+    position: absolute;
+    padding-left: 10px;
+    top: 5cm;
+    left: 1cm;
+    right: 5cm;
+    bottom: 5cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .visa-form {
+    width: 100%;
+    padding-left: 10px;
+
+    max-width: 500px;
+    padding: 20px;
+    background-color: #1a406596;
+    border-radius: 10px;
+  }
+  
+  .form-title {
+    color:  #0e2a53a0;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    padding-right: 25px;
+
+    
+
+  }
+  
+  .form-group label {
+    padding-right: 10px;
+
+    color:  #0d143e;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e2e3e582;
+    color: #0d143e;
+    font-size: 16px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #e3e4ebc1;
+    color: #003580;
+    font-size: 18px;
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005f99;
+  }
+  .form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1;
+}
+
+.arrow-btn {
+    padding: 8px;
+    border: 1px solid #003580;
+    background-color: #003580a0;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+  
+  

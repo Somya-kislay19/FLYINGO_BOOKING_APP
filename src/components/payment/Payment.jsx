@@ -1,0 +1,83 @@
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import QRCode from 'qrcode.react';
+import './Payment.css';
+
+const Payment = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { selectedSeats, totalAmount } = location.state || {};
+
+    const userDetails = JSON.parse(localStorage.getItem('userDetails')) || {};
+
+    
+    const qrLink = 'https://docs.google.com/forms/d/e/1FAIpQLSez_8-qTAyvBtoEK9o1McrgotW5Nx9ZFNnSjJ2EvCA2t3COUw/viewform?usp=sf_link';  
+     const qrMessage = `Payment Successful! Check your document here: ${qrLink}`;
+
+    return (
+        <div className='bo'>
+            <div className="checkout-pagep">
+                <h1>Payment</h1>
+                <ul>
+                    {selectedSeats && selectedSeats.map(seat => (
+                        <li key={seat}>
+                            <span className="seat-label">Selected seat:</span>
+                            <span className="seat-number">{seat}</span>
+                        </li>
+                    ))}
+                </ul>
+                <h2>Total Amount: Rs.{totalAmount}</h2>
+                <h2>User Details:</h2>
+                <p>Name: {userDetails.name}</p>
+                <p>Passport Number: {userDetails.passport}</p>
+                <p>Flight Preference: {userDetails.flight}</p>
+
+                {/* New Form Table Section */}
+                <div className="bank-details">
+                    <h2>Bank Details</h2>
+                    <form>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><label htmlFor="accountNumber">Account Number:</label></td>
+                                    <td><input type="text" id="accountNumber" name="accountNumber" required /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="accountHolder">Name of Account Holder:</label></td>
+                                    <td><input type="text" id="accountHolder" name="accountHolder" required /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="bankName">Bank Name:</label></td>
+                                    <td><input type="text" id="bankName" name="bankName" required /></td>
+                                </tr>
+                                <tr>
+                                    <td><label htmlFor="district">District:</label></td>
+                                    <td><input type="text" id="district" name="district" required /></td>
+                                </tr>
+                                <tr>
+                                    <td colSpan="2" style={{ textAlign: 'center' }}>
+                                        <button type="submit" className="submit-button">Submit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+
+                <h2>Or Scan this QR code to view your payment confirmation:</h2>
+                <div className="qr-container">
+                    <QRCode
+                        value={qrMessage}
+                        size={256}
+                        level={'H'}
+                        includeMargin={true}
+                    />
+                </div>
+                <p>If the QR code does not work, please manually confirm your payment on the next page.</p>
+                <button onClick={() => navigate('/confirmation')}>Proceed to Confirmation</button>
+            </div>
+        </div>
+    );
+};
+
+export default Payment;
