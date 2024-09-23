@@ -6,7 +6,7 @@ const VisaPage = () => {
   const navigate = useNavigate();
 
   const handleExploreClick = () => {
-    navigate("/visa"); // Navigates to the Visa form page
+    navigate("/visa1"); // Navigates to the Visa form page
   };
 
   const handleApplyClick = () => {

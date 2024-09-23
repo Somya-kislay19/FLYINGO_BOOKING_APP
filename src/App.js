@@ -38,6 +38,8 @@ function App() {
         <Route path="/hotels/:id" element={<Hotel />} />
         <Route path="/choose-airlines" element={<Hotel />} />
         <Route path="/visa" element={<VisaPage />} />
+        <Route path="/visa1" element={<Visa />} />
+
         <Route path="/id" element={<Visa />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/create" element={<Form />} />

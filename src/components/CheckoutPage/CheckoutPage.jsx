@@ -26,10 +26,16 @@ const CheckoutPage = () => {
     };
 
     return (
-        
-        <div className='bo'>
-            <Navbar/>
-            <div className="checkout-page">
+        <div className='checkout-container'>
+            <Navbar />
+            <div className="checkout-sidebar">
+                <ul>
+                    <li>Register for Visa</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div className="checkout-content">
                 <h1>Checkout</h1>
                 <h2>Selected Seats:</h2>
                 <ul>
@@ -38,12 +44,12 @@ const CheckoutPage = () => {
                     ))}
                 </ul>
                 <h2>Total Amount: Rs.{totalAmount}</h2>
-                <h2 >User Details:</h2>
+                <h2>User Details:</h2>
                 <div className="user-details">
-        <p>Name: {userDetails.name}</p>
-        <p>Passport Number: {userDetails.passport}</p>
-        <p>Flight Preference: {userDetails.flight}</p>
-    </div>
+                    <p>Name: {userDetails.name}</p>
+                    <p>Passport Number: {userDetails.passport}</p>
+                    <p>Flight Preference: {userDetails.flight}</p>
+                </div>
                 <button onClick={pay}>Proceed to Payment</button>
             </div>
         </div>
