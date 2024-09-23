@@ -1,0 +1,97 @@
+.contact-container {
+    font-family: Arial, sans-serif;
+    width: 75vw; /* Updated to take 75% of the screen width */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12.5vw; /* Added equal padding on both sides */
+  }
+  
+  .navbar {
+    background-color: #003580;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .contact-body {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .contact-body h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #003580;
+  }
+  
+  .contact-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .contact-option {
+    margin-bottom: 10px;
+    padding: 8px 12px; /* Reduced button size */
+    background-color: #003580;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+    width: 100%;
+  }
+  
+  .contact-option:hover {
+    background-color: #002f6c;
+  }
+  
+  .query-input {
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-submit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003580;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .contact-submit:hover {
+    background-color: #002f6c;
+  }
+  
+  .chat-box {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e0f0ff;
+    border-radius: 10px;
+    text-align: center;
+    width: 85%; /* Reduced size of the chat box from the right */
+  }
+  
+  .chat-box p {
+    font-size: 16px;
+    color: #003580;
+  }
+  

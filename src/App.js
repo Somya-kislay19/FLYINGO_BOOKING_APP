@@ -1,6 +1,4 @@
-import {
-  BrowserRouter,Routes,Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import List from "./components/list/List";
 import Hotel from "./pages/hotel/Hotel";
@@ -22,55 +20,53 @@ import Sj from "./components/list/Sj";
 import SearchItem from "./components/searchItem/SearchItem";
 import Intro from "./components/Intro/Intro";
 import Form from "./components/UserDetail/Form";
+import VisaPage from "./components/visa/VisaPAge";
+import Contact from "./components/call/Call";
 
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/hotels" element={<Intro/>}/>
-      <Route path="/hotels/:id" element={<Hotel/>}/>
-      <Route path="/choose airlines" element={<Hotel/>}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sjb" element={<Sj />} />
+        <Route path="/aib" element={<AirIndia />} />
+        <Route path="/eib" element={<Emirates />} />
+        <Route path="/iib" element={<Indigo />} />
 
 
-      <Route path="/id" element={<Visa />} />
+        <Route path="/hotels" element={<Intro />} />
+        <Route path="/hotels/:id" element={<Hotel />} />
+        <Route path="/choose-airlines" element={<Hotel />} />
+        <Route path="/visa" element={<VisaPage />} />
+        <Route path="/id" element={<Visa />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/create" element={<Form />} />
+        <Route path="/userInfo" element={<VisaPage />} />
+        <Route path="/gotovisa" element={<Visa />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/confirmation" element={<ConfirmationPage />} />
+        <Route path="/contact" element={<Contact />} />
 
-      <Route path="/checkout" element={<CheckoutPage />} />
-      <Route path="/hotels" element={<Intro />} />
-      <Route path="/create" element={<Form />} />
 
-
-      <Route path="/userInfo" element={<Visa />} />
-      <Route path="/gotovisa" element={<Visa />} />
-
-      <Route path="/checkout" element={<CheckoutPage />} />
-      <Route path="/payment" element={<Payment/>} />
-      <Route path="/confirmation" element={<ConfirmationPage/>} />
-      <Route path="/flightoptions" element={<Visa/>} />
-
-      <Route path="/visa" element={<Visa />} />
-      <Route path="/airindia" element={<AirIndia/>} />
-      <Route path="/spicejet" element={<Spicejet/>} />
-      <Route path="/emirates" element={<Emirates/>} />
-      <Route path="/indigo" element={<Indigo/>} />
-      <Route path="/airindiabooking" element={<Abooking/>} />
-      <Route path="/emiratesbooking" element={<Ebooking/>} />
-      <Route path="/indigobooking" element={<Ibooking/>} />
-      <Route path="/spicejetbooking" element={<Sbooking/>} />
-      <Route path="/airindiab" element={<AirIndia />} />
+        <Route path="/flightoptions" element={<Visa />} />
+        <Route path="/airindia" element={<AirIndia />} />
+        <Route path="/spicejet" element={<Spicejet />} />
+        <Route path="/emirates" element={<Emirates />} />
+        <Route path="/indigo" element={<Indigo />} />
+        <Route path="/airindiabooking" element={<Abooking />} />
+        <Route path="/emiratesbooking" element={<Ebooking />} />
+        <Route path="/indigobooking" element={<Ibooking />} />
+        <Route path="/spicejetbooking" element={<Sbooking />} />
+        <Route path="/airindiab" element={<AirIndia />} />
         <Route path="/emiratesb" element={<Emirates />} />
         <Route path="/indigob" element={<Indigo />} />
-
         <Route path="/spicejetb" element={<Sj />} />
+        <Route path="/search" element={<SearchItem />} />
+        <Route path="/availability" element={<AvailabilityPage />} />
+        <Route path="/av" element={<AV />} />
 
-
-
-
-
-
-
-
-    </Routes>
+        
+      </Routes>
     </BrowserRouter>
   );
 }

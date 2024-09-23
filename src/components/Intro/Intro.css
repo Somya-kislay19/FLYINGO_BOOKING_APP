@@ -1,80 +1,152 @@
-.intro-container {
-  max-width: 100%;
-  margin: 50px auto;
+/* Container */
+.flyingo-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003580;
+  color: white;
+  padding: 15px 30px;
+}
+
+.navbar-left h1 {
+  margin: 0;
+}
+
+.navbar-right .nav-btn {
+  background-color: #e0f0ff;
+  color: #003580;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.navbar-right .nav-btn:hover {
+  background-color: #003580;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex: 1;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #003580 0%, #e0f0ff 50%, #fff 100%);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e0f0ff;
+  color: #003580;
   text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.intro-section {
-  margin-bottom: 30px;
+.sidebar-item:hover {
+  background-color: #003580;
+  color: white;
 }
 
-.intro-section h1 {
-  font-size: 2.5em;
-  color: #003580;
-}
-
-.intro-section p {
-  font-size: 1.2em;
-  color: #003580;
-}
-
-.flights-section {
-  width: 100%;
+/* Cards Section */
+.cards-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+  width: 80%;
+  padding-left: 20px;
 }
 
-.flights-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #003580;
-  grid-column: span 2;
-}
-
-.airline {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card {
+  background-color: #e0f0ff;
   padding: 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 200px;
   border-radius: 10px;
-  color: #fff;
-  overflow: hidden;
+  text-align: center;
+  color: #003580;
+  overflow: hidden; /* Ensure the image stays within the card */
 }
 
-.airline h3 {
-  font-size: 1.5em;
-  margin: 0;
+.card img {
+  width: 100%; /* Ensure the image scales horizontally */
+  height: 150px; /* Limit the image height */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.airline p {
-  font-size: 1em;
-  margin: 0;
+.large-card {
+  height: 250px;
 }
 
-.book-now-button {
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #003580;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  color: white;
+  padding: 15px 30px;
 }
 
-.book-now-button:hover {
-  background-color: #00264d;
+.footer-left h2 {
+  margin: 0;
+}
+
+.footer-right p {
+  margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* On tablets and phones, stack the cards in one column */
+  .cards-section {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-right .nav-btn {
+    padding: 8px 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .large-card {
+    height: 200px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

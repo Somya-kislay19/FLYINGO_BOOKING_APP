@@ -2,42 +2,118 @@ import React from 'react';
 import './Intro.css';
 import { useNavigate } from 'react-router-dom';
 
-const Intro = () => {
-  const navigate = useNavigate(); // Move this line up here
+const Intro= () => {
 
-  const book = () => {
-    navigate("/gotovisa"); // Correctly call navigate
+  const navigate = useNavigate();
+
+  const sjb = () => {
+    navigate("/sjb"); // Navigates to the Visa form page
   };
 
+  const aib = () => {
+    navigate("/aib"); // Navigates to the Visa form page
+  };
+
+  const eib = () => {
+    navigate("/eib"); // Navigates to the Visa form page
+  };
+
+  const iib = () => {
+    navigate("/iib"); // Navigates to the Visa form page
+  };
+
+  const rv = () => {
+    navigate("/visa"); 
+  };
+
+  const help = () => {
+    navigate("/help"); 
+  };
+
+  const conc = () => {
+    navigate("/contact"); 
+  };
+
+  const b1 = () => {
+    navigate("/create"); 
+  };
+
+  const b2 = () => {
+    navigate("/create"); 
+  };
+  const b3 = () => {
+    navigate("/contact"); 
+  };
+
+
   return (
-    <div className="intro-container">
-      <section className="intro-section">
-        <h1>Welcome to Flyingo</h1>
-        <p>
-          Flyingo is your ultimate flight booking solution, offering a seamless and user-friendly interface to book flights with ease. Our platform ensures you get the best deals and an enjoyable booking experience.
-        </p>
-      </section>
-      <section className="flights-section">
-        <h2>Flights We Provide</h2>
-        <div className="airline1">
-          <h3>Airline 1</h3>
-          <p>Description of Airline 1.</p>
+    <div className="flyingo-container">
+      <nav className="navbar">
+        <div className="navbar-left">
+          <h1>FLYINGO</h1>
+        </div>
+        <div className="navbar-right">
+          <button className="nav-btn" onClick={b1}>  Sign In</button>
+          <button className="nav-btn" onClick={b2}>Sign Up</button>
+          <button className="nav-btn" onClick={b3}>Call Us</button>
+        </div>
+      </nav>
+
+      <div className="main-content">
+        
+        <div className="sidebar">
+          <div className="sidebar-item"></div>
+          <button className="btn" onClick={rv}>Register for Visa</button>
+
+          <div className="sidebar-item"></div>
+          <button className="btn" onClick={help}>Help</button>
+
+
+          <div className="sidebar-item"></div>
+          <button className="btn" onClick={conc}>Contact Us</button>
 
         </div>
-        <div className="airline2">
-          <h3>Airline 2</h3>
-          <p>Description of Airline 2.</p>
+
+        <div className="cards-section">
+          <div className="card large-card">
+            
+            <img src={require('./spicejet.jpg')} alt="Card 1" />
+            <p>Spicejet</p>
+        <button className="btn" onClick={sjb}>BOOK</button>
+
+          </div>
+          <div className="card large-card">
+          <img src={require('./airindia.jpg')} alt="Card 2" />
+            
+            <p>Air-India</p>
+            <button className="btn" onClick={aib}>BOOK</button>
+
+
+          </div>
+          <div className="card large-card">
+          <img src={require('./emirates.jpg')} alt="Card 3" />
+          <p>Emirates</p>
+        <button className="btn" onClick={eib}>BOOK</button>
+
+          </div>
+          <div className="card large-card">
+          <img src={require('./indigo.jpg')} alt="Card 4" />
+          <p>Indigo</p>
+        <button className="btn" onClick={iib}>BOOK</button>
+
+          </div>
         </div>
-        <div className="airline3">
-          <h3>Airline 3</h3>
-          <p>Description of Airline 3.</p>
+      </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-left">
+          <h2>FLYINGO</h2>
         </div>
-        <div className="airline4">
-          <h3>Airline 4</h3>
-          <p>Description of Airline 4.</p>
+        <div className="footer-right">
+          <p>Your ultimate flight booking experience.</p>
         </div>
-        <button className="book" onClick={book}>Book Now</button>
-      </section>
+      </footer>
     </div>
   );
 };
