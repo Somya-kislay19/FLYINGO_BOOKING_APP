@@ -34,7 +34,7 @@
 .navItems {
     display: flex;
     gap: 20px;
-    margin-left: 50px; /* This pushes the buttons to the right */
+    margin-left: 60%; /* This pushes the buttons to the right */
     padding-right: 50px; /* Adjust the padding to position it near the right edge */
 }
 

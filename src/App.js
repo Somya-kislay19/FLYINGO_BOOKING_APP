@@ -22,9 +22,11 @@ import Intro from "./components/Intro/Intro";
 import Form from "./components/UserDetail/Form";
 import VisaPage from "./components/visa/VisaPAge";
 import Contact from "./components/call/Call";
+import Header from "./components/header/Header";
 
 function App() {
   return (
+  
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
