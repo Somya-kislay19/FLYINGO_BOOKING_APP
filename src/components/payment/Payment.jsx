@@ -2,20 +2,34 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode.react';
 import './Payment.css';
+import Navbar from '../navbar/Navbar'; 
 
 const Payment = () => {
     const location = useLocation();
     const navigate = useNavigate();
+
+    const submit = () => {
+        navigate("/confirmation"); 
+      };
+
+
     const { selectedSeats, totalAmount } = location.state || {};
 
     const userDetails = JSON.parse(localStorage.getItem('userDetails')) || {};
 
-    
     const qrLink = 'https://docs.google.com/forms/d/e/1FAIpQLSez_8-qTAyvBtoEK9o1McrgotW5Nx9ZFNnSjJ2EvCA2t3COUw/viewform?usp=sf_link';  
-     const qrMessage = `Payment Successful! Check your document here: ${qrLink}`;
+    const qrMessage = `Payment Successful! Check your document here: ${qrLink}`;
 
     return (
-        <div className='bo'>
+        <div className='payment-container'>
+            <Navbar /> 
+            <div className="checkout-sidebar">
+                <ul>
+                    <li>Register for Visa</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
             <div className="checkout-pagep">
                 <h1>Payment</h1>
                 <ul>
@@ -32,7 +46,6 @@ const Payment = () => {
                 <p>Passport Number: {userDetails.passport}</p>
                 <p>Flight Preference: {userDetails.flight}</p>
 
-                {/* New Form Table Section */}
                 <div className="bank-details">
                     <h2>Bank Details</h2>
                     <form>
@@ -56,7 +69,7 @@ const Payment = () => {
                                 </tr>
                                 <tr>
                                     <td colSpan="2" style={{ textAlign: 'center' }}>
-                                        <button type="submit" className="submit-button">Submit</button>
+                                        <button type="submit" className="submit-button" onClick={submit}>Submit</button>
                                     </td>
                                 </tr>
                             </tbody>

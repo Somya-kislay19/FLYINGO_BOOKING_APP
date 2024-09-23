@@ -1,125 +1,133 @@
-.bo {
-    font-family: Arial, sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-margin-top: 2%;    padding: 0;
+.payment-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
-}
-.checkout-pagep {
-    max-width: 1000px;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f5f5f5;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #003580 0%, #e0f0ff 50%, #fff 100%);
-
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 8%;
-
-}
-
-.checkout-pagep h1 {
+    height: 60px;
+    background-color: #003580;
+    color: white;
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+    z-index: 1000;
+  }
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 20%;
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding-top: 20px;
+  }
+  
+  .checkout-pagep {
+    margin-left: 20%;
+    width: 80%;
+    padding: 20px;
+    padding-top: 80px;
+    background-color: #fff;
+  }
+  
+  h1, h2 {
     color: #003580;
-    padding-top: 250px;
-    margin-bottom: 20px;
-    padding-left: 30px;
-}
-
-.checkout-pagep h2 {
-    color: #003580;
-    margin-top: 20px;
-    padding-left: 30px;
-}
-
-.checkout-pagep ul {
+  }
+  
+  ul {
+    padding: 0;
     list-style: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e0f0ff;
+    border-radius: 5px;
+  }
+  
+  .bank-details {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+
+  .checkout-sidebar {
+    width: 20%; /* Sidebar occupies 20% of the screen width */
+    background-color: #f0f0f0;
+    padding: 20px;
+    padding-top: 80px; /* Adds spacing so sidebar content is below the navbar */
+    box-sizing: border-box;
+    height: 100vh; /* Full height of the screen */
+    position: fixed; /* Sticks sidebar on the left side */
+    top: 60px; /* Below the navbar */
+    left: 0;
+  }
+  
+  .checkout-sidebar ul {
+    list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-.checkout-pagep li {
-    background-color: #e0f0ff;
+  }
+  
+  .checkout-sidebar li {
+    margin-bottom: 15px;
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 200px;
-
-}
-
-.checkout-pagep li:nth-child(odd) {
-    background-color: #cce0ff;
-    padding: 10px;
-    padding-left: 200px;
-
-
-}
-
-.seat-label {
-    margin-right: 20px;
-    flex-grow: 1;
-    text-align: left;
-}
-
-.seat-number {
-    flex-shrink: 0;
-    padding-right: 300px;
-}
-
-.checkout-pagep button {
     background-color: #003580;
-    color: #fff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .checkout-sidebar li:hover {
+    background-color: #002f6c;
+  }
+
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #003580;
+    color: white;
     border: none;
-    padding: 15px 30px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
-
-.checkout-pagep button:hover {
-    background-color: #0056b3;
-}
-
-.checkout-pagep p {
-    margin: 5px 0;
-    color:  #154477;
-    font-weight: 600;
-    font-size: larger;
-}
-
-@media (max-width: 600px) {
-    .checkout-page {
-        padding: 10px;
-    }
-
-    .checkout-page button {
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-.qr-container {
-    text-align: center;
-    margin: 20px auto;
-}
-
-.checkout-pagep h2 {
-    text-align: center;
-    color: #003580;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #002f6c;
+  }
+  
+  .qr-container {
     margin-top: 20px;
-}
-
-.checkout-pagep button {
-    margin-top: 20px;
-}
+    text-align: center;
+  }
+  
