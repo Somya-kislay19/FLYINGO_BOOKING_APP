@@ -1,0 +1,62 @@
+/* Card container for the subscribe form */
+.subscribe-card {
+    background-color: #003580; /* Main theme color */
+    color: white;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .subscribe-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e0f0ff; /* Light blue color for contrast */
+  }
+  
+  /* Input fields styling */
+  .subscribe-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button styling */
+  .subscribe-button {
+    background-color: #0071c2; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #005a9e; /* Darker shade on hover */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 480px) {
+    .subscribe-card {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .subscribe-title {
+      font-size: 20px;
+    }
+  
+    .subscribe-input, .subscribe-button {
+      font-size: 14px;
+    }
+  }
+  

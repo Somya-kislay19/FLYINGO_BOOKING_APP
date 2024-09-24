@@ -4,15 +4,13 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer-content">
-                <div className="footer-links">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                    <a href="mailto:support@flyingo.com">Email</a>
-                </div>
-                <p className="copyright">All rights reserved © Somya</p>
-            </div>
-        </footer>
+        <div className="footer-left">
+          <h2>FLYINGO</h2>
+        </div>
+        <div className="footer-right">
+          <p>Your ultimate flight booking experience.</p>
+        </div>
+      </footer>
     );
 };
 

@@ -70,31 +70,41 @@ const Header = ({ type }) => {
     setModalContent(content);
     setIsModalOpen(true);
   };
+const stay=()=>{
+  navigate("/location");
+
+}
+const flight=()=>{
+
+}
+const taxi=()=>{
+
+}
+const hotels=()=>{
+
+};
 
   return (
     <div className="header">
       <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
         <div className="headerList">
-          <div className="headerListItem active">
+          <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <span>Stays</span>
+            <button className="btn" onClick={stay}>Stays</button> 
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
+            <button className="btn" onClick={flight}>Flight</button> 
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <span>Car rentals</span>
+            <button className="btn" onClick={taxi}>Airport Taxis</button> 
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <span>Attractions</span>
+            <button className="btn" onClick={hotels}>Hotels</button> 
           </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faTaxi} />
-            <span>Airport taxis</span>
-          </div>
+          
         </div>
         {type !== "list" && (
           <>

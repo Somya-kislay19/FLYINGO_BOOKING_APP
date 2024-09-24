@@ -1,0 +1,110 @@
+.location-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0f0ff;
+}
+
+.greet-section h1 {
+    color: #003580;
+    font-size: 32px;
+}
+
+.greet-section h2 {
+    color: #003580;
+    margin-top: 10px;
+}
+
+.greet-section p {
+    color: #003580;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Align 5 cards per row, with space between them */
+.destination-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 cards per row */
+    gap: 80px; /* Space between cards */
+    margin-bottom: 30px;
+    padding-left: 3%;
+    padding-right: 1%;
+}
+.card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    height: 200px; /* Fixed height for uniformity */
+width: 80%;
+
+}
+
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #003580;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image covers the card */
+}
+
+.city-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: font-size 0.3s ease;
+}
+
+.card:hover .city-name {
+    font-size: 22px;
+}
+
+.selected-destination {
+    margin-top: 30px;
+}
+
+.selected-destination h3 {
+    color: #003580;
+}
+
+.stay-button {
+    background-color: #003580;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.stay-button:hover {
+    background-color: #004b85;
+}
+
+/* Responsive for smaller screens: align 2 cards per row on mobile */
+@media (max-width: 768px) {
+    .destination-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
+        gap: 15px; /* Adjust space between cards */
+    }
+}
+
+/* For tablet screens: 3 cards per row */
+@media (max-width: 1024px) {
+    .destination-cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablet */
+    }
+}

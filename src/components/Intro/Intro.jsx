@@ -1,6 +1,7 @@
 import React from 'react';
 import './Intro.css';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../navbar/Navbar';
 
 const Intro= () => {
 
@@ -47,17 +48,10 @@ const Intro= () => {
 
 
   return (
+    <div> 
+      <Navbar/>
     <div className="flyingo-container">
-      <nav className="navbar">
-        <div className="navbar-left">
-          <h1>FLYINGO</h1>
-        </div>
-        <div className="navbar-right">
-          <button className="nav-btn" onClick={b1}>  Sign In</button>
-          <button className="nav-btn" onClick={b2}>Sign Up</button>
-          <button className="nav-btn" onClick={b3}>Call Us</button>
-        </div>
-      </nav>
+      
 
       <div className="main-content">
         
@@ -114,6 +108,7 @@ const Intro= () => {
           <p>Your ultimate flight booking experience.</p>
         </div>
       </footer>
+    </div>
     </div>
   );
 };

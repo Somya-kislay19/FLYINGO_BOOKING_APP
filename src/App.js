@@ -23,6 +23,8 @@ import Form from "./components/UserDetail/Form";
 import VisaPage from "./components/visa/VisaPAge";
 import Contact from "./components/call/Call";
 import Header from "./components/header/Header";
+import Location from "./pages/location/Location";
+import Subscribe from "./pages/Subs";
 
 function App() {
   return (
@@ -34,8 +36,16 @@ function App() {
         <Route path="/aib" element={<AirIndia />} />
         <Route path="/eib" element={<Emirates />} />
         <Route path="/iib" element={<Indigo />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/f" element={<Intro />} />
+        <Route path="/sign" element={< Subscribe/>} />
 
 
+
+
+
+
+        <Route path="/hotel" element={<Hotel />} />
         <Route path="/hotels" element={<Intro />} />
         <Route path="/hotels/:id" element={<Hotel />} />
         <Route path="/choose-airlines" element={<Hotel />} />
