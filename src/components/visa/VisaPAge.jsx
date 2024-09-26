@@ -6,11 +6,14 @@ const VisaPage = () => {
   const navigate = useNavigate();
 
   const handleExploreClick = () => {
-    navigate("/visa1"); // Navigates to the Visa form page
+    navigate("/visa1"); 
   };
 
+
+   
+
   const handleApplyClick = () => {
-    navigate("/visapply"); // Navigates to the Visa form page
+    navigate("/registration"); 
   }
 
   return (

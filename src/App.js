@@ -25,6 +25,7 @@ import Contact from "./components/call/Call";
 import Header from "./components/header/Header";
 import Location from "./pages/location/Location";
 import Subscribe from "./pages/Subs";
+import VisaRegistration from "./components/visa/VisaRegistration";
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/f" element={<Intro />} />
         <Route path="/sign" element={< Subscribe/>} />
+        <Route path="/registration" element={< VisaRegistration/>} />
+
 
 
 
