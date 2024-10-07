@@ -26,6 +26,8 @@ import Header from "./components/header/Header";
 import Location from "./pages/location/Location";
 import Subscribe from "./pages/Subs";
 import VisaRegistration from "./components/visa/VisaRegistration";
+import { Map } from "mapbox-gl";
+import MapC from "./pages/map/map";
 
 function App() {
   return (
@@ -38,7 +40,7 @@ function App() {
         <Route path="/eib" element={<Emirates />} />
         <Route path="/iib" element={<Indigo />} />
         <Route path="/location" element={<Location />} />
-        <Route path="/f" element={<Intro />} />
+        <Route path="/f" element={<Hotel/>} />
         <Route path="/sign" element={< Subscribe/>} />
         <Route path="/registration" element={< VisaRegistration/>} />
 
@@ -47,6 +49,7 @@ function App() {
 
 
 
+        <Route path="/hotel" element={<Hotel />} />
 
         <Route path="/hotel" element={<Hotel />} />
         <Route path="/hotels" element={<Intro />} />
@@ -81,6 +84,9 @@ function App() {
         <Route path="/search" element={<SearchItem />} />
         <Route path="/availability" element={<AvailabilityPage />} />
         <Route path="/av" element={<AV />} />
+
+        <Route path="/more" element={<MapC/>} />
+
 
         
       </Routes>

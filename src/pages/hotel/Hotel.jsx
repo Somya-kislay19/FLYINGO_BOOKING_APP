@@ -82,9 +82,11 @@ const Hotel = () => {
             />
           </div>
         )}
-        <div className="hotelWrapper">
+
+
+<div className="hotelWrapper">
           <button className="bookNow">Reserve or Book Now!</button>
-          <h1 className="hotelTitle">Tower Street Apartments</h1>
+          <h1 className="hotelTitle">Ashok Inns</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
             <span>Elton St 125 New york</span>
@@ -111,8 +113,8 @@ const Hotel = () => {
             <div className="hotelDetailsTexts">
               <h1 className="hotelTitle">Stay in the heart of City</h1>
               <p className="hotelDesc">
-                Located a 5-minute walk from St. Florian's Gate in Krakow, Tower
-                Street Apartments has accommodations with air conditioning and
+                Located a 5-minute walk from Viranek Gate, Tower
+                Ashok Inns has accommodations with air conditioning and
                 free WiFi. The units come with hardwood floors and feature a
                 fully equipped kitchenette with a microwave, a flat-screen TV,
                 and a private bathroom with shower and a hairdryer. A fridge is
@@ -120,6 +122,172 @@ const Hotel = () => {
                 machine. Popular points of interest near the apartment include
                 Cloth Hall, Main Market Square and Town Hall Tower. The nearest
                 airport is John Paul II International Kraków–Balice, 16.1 km
+                from Tower Ashok Inns, and the property offers a paid
+                airport shuttle service.
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+                Located in the real heart of City, this property has an
+                excellent location score of 9.8!
+              </span>
+              <h2>
+                <b>Rs.945</b> (per night)
+              </h2>
+              <button>Reserve or Book Now!</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="hotelWrapper">
+          <button className="bookNow">Reserve or Book Now!</button>
+          <h1 className="hotelTitle">Silver Oaks</h1>
+          <div className="hotelAddress">
+            <FontAwesomeIcon icon={faLocationDot} />
+            <span>Taman St 125 </span>
+          </div>
+          <span className="hotelDistance">
+            Excellent location – 500m from center
+          </span>
+          <span className="hotelPriceHighlight">
+            Book a stay over R2.1140 at this property and get a free airport taxi
+          </span>
+          <div className="hotelImages">
+            {photos.map((photo, i) => (
+              <div className="hotelImgWrapper" key={i}>
+                <img
+                  onClick={() => handleOpen(i)}
+                  src={photo.src}
+                  alt=""
+                  className="hotelImg"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className="hotelTitle">Stay in the heart of City</h1>
+              <p className="hotelDesc">
+                After exploring a 20-minute walk from Shiuli park, Silver Oaks has accommodations with air conditioning and
+                free WiFi. The units come with hardwood floors and feature a
+                fully equipped kitchenette with a microwave, a flat-screen TV,
+                and a private bathroom with shower and a hairdryer. A fridge is
+                also offered, as well as an electric tea pot and a coffee
+                machine. Popular points of interest near the apartment include
+                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
+                airport is John Paul II International Raman Raod, 16.1 km
+                from Silver Oaks, and the property offers a paid
+                airport shuttle service.
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+                Located in the real heart of Krakow, this property has an
+                excellent location score of 9.8!
+              </span>
+              <h2>
+                <b>1945</b> (per night)
+              </h2>
+              <button>Reserve or Book Now!</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="hotelWrapper">
+          <button className="bookNow">Reserve or Book Now!</button>
+          <h1 className="hotelTitle">Maharaja palace</h1>
+          <div className="hotelAddress">
+            <FontAwesomeIcon icon={faLocationDot} />
+            <span>Vioray Road</span>
+          </div>
+          <span className="hotelDistance">
+            Excellent location – 500m from center
+          </span>
+          <span className="hotelPriceHighlight">
+            Book a stay over Rs.2414 at this property and get a free airport taxi
+          </span>
+          <div className="hotelImages">
+            {photos.map((photo, i) => (
+              <div className="hotelImgWrapper" key={i}>
+                <img
+                  onClick={() => handleOpen(i)}
+                  src={photo.src}
+                  alt=""
+                  className="hotelImg"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className="hotelTitle">Stay in the heart of City</h1>
+              <p className="hotelDesc">
+                Located a 5-minute walk from Vioray Road, Tower
+                Street Apartments has accommodations with air conditioning and
+                free WiFi. The units come with hardwood floors and feature a
+                fully equipped kitchenette with a microwave, a flat-screen TV,
+                and a private bathroom with shower and a hairdryer. A fridge is
+                also offered, as well as an electric tea pot and a coffee
+                machine. Popular points of interest near the apartment include
+                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
+                airport is Sen Paul Airport, 16.1 km
+                from Maharaja Palace, and the property offers a paid
+                airport shuttle service.
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+                Located in the real heart of Krakow, this property has an
+                excellent location score of 9.8!
+              </span>
+              <h2>
+                <b>Rs.1945</b> (per night)
+              </h2>
+              <button>Reserve or Book Now!</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="hotelWrapper">
+          <button className="bookNow">Reserve or Book Now!</button>
+          <h1 className="hotelTitle">Occa Inns</h1>
+          <div className="hotelAddress">
+            <FontAwesomeIcon icon={faLocationDot} />
+            <span>Telco Road</span>
+          </div>
+          <span className="hotelDistance">
+            Excellent location – 500m from center
+          </span>
+          <span className="hotelPriceHighlight">
+            Book a stay over Rs.1014 at this property and get a free airport taxi
+          </span>
+          <div className="hotelImages">
+            {photos.map((photo, i) => (
+              <div className="hotelImgWrapper" key={i}>
+                <img
+                  onClick={() => handleOpen(i)}
+                  src={photo.src}
+                  alt=""
+                  className="hotelImg"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className="hotelTitle">Stay in the heart of City</h1>
+              <p className="hotelDesc">
+                Located a 5-minute walk from St. Francis, Occa Inns has accommodations with air conditioning and
+                free WiFi. The units come with hardwood floors and feature a
+                fully equipped kitchenette with a microwave, a flat-screen TV,
+                and a private bathroom with shower and a hairdryer. A fridge is
+                also offered, as well as an electric tea pot and a coffee
+                machine. Popular points of interest near the apartment include
+                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
+                airport is Raman II International, 16.1 km
                 from Tower Street Apartments, and the property offers a paid
                 airport shuttle service.
               </p>
@@ -131,7 +299,63 @@ const Hotel = () => {
                 excellent location score of 9.8!
               </span>
               <h2>
-                <b>$945</b> (9 nights)
+                <b>Rs.1040</b> (per night)
+              </h2>
+              <button>Reserve or Book Now!</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="hotelWrapper">
+          <button className="bookNow">Reserve or Book Now!</button>
+          <h1 className="hotelTitle">Navya Naman Inns</h1>
+          <div className="hotelAddress">
+            <FontAwesomeIcon icon={faLocationDot} />
+            <span>k</span>
+          </div>
+          <span className="hotelDistance">
+            Excellent location – 500m from center
+          </span>
+          <span className="hotelPriceHighlight">
+          </span>
+          <div className="hotelImages">
+            {photos.map((photo, i) => (
+              <div className="hotelImgWrapper" key={i}>
+                <img
+                  onClick={() => handleOpen(i)}
+                  src={photo.src}
+                  alt=""
+                  className="hotelImg"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="hotelDetails">
+            <div className="hotelDetailsTexts">
+              <h1 className="hotelTitle">Stay in the heart of City</h1>
+              <p className="hotelDesc">
+                Located a 5-minute walk from St. Florian's Gate in Krakow, Tower
+                Street Apartments has accommodations with air conditioning and
+                free WiFi. The units come with hardwood floors and feature a
+                fully equipped kitchenette with a microwave, a flat-screen TV,
+                and a private bathroom with shower and a hairdryer. A fridge is
+                also offered, as well as an electric tea pot and a coffee
+                machine. Popular points of interest near the apartment include
+                Cloth Hall, Main Market Square and Town Hall Tower. The nearest
+                airport is Bose International Airport, 16.1 km
+                from Naya Naman Inns, and the property offers a paid
+                airport shuttle service.
+              </p>
+            </div>
+            <div className="hotelDetailsPrice">
+              <h1>Perfect for a 9-night stay!</h1>
+              <span>
+                Located in the real heart of city, this property has an
+                excellent location score of 9.8!
+              </span>
+              <h2>
+                <b>Rs.945</b> (per nights)
               </h2>
               <button>Reserve or Book Now!</button>
             </div>
