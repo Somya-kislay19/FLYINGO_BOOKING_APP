@@ -44,6 +44,7 @@ import Surat from "./pages/hotel/Sh";
 import Hyderabad from "./pages/hotel/Hy";
 import Rf from "./components/conf/rf";
 import We from "./pages/weather/We";
+import Indigo1 from "./components/Indigo/Indigo1";
 
 function App() {
   return (

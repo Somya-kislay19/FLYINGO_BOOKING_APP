@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Indigo1 = () => {
   const navigate = useNavigate();
-  const [selectedSeats, setSelectedSeats] = useState([]);
-  const [userDetails, setUserDetails] = useState({});
+  
 
     const ahandleAvailabilityClick = () => {
         navigate("/indigobooking");
@@ -49,7 +48,7 @@ const Indigo1 = () => {
       <div className="searchItem">
         <img src={require('./i.jpg')} alt="Airline 2" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">Air India</h1>
+          <h1 className="siTitle">Indigo</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -76,7 +75,7 @@ const Indigo1 = () => {
       <div className="searchItem">
         <img src={require('./i.jpg')} alt="Airline 3" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">Spicejet</h1>
+          <h1 className="siTitle">Indigo</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -103,7 +102,7 @@ const Indigo1 = () => {
       <div className="searchItem">
         <img src={require('./i.jpg')} alt="Airline 4" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">Emirates</h1>
+          <h1 className="siTitle">Indigo</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
