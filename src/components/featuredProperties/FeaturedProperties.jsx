@@ -16,7 +16,7 @@ const navigate=useNavigate();
         navigate("/emirates")
     }
     const i=() =>{
-        navigate("/indigo")
+        navigate("/indigo1")
     }
 return(
 <div className="fp">
