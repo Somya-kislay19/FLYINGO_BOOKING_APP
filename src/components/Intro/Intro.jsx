@@ -25,10 +25,11 @@ const Intro= () => {
 
   const rv = () => {
     navigate("/visa"); 
-  };
+
+    };
 
   const help = () => {
-    navigate("/help"); 
+    navigate("/h"); 
   };
 
   const conc = () => {
@@ -60,7 +61,7 @@ const Intro= () => {
           <button className="btn" onClick={rv}>Register for Visa</button>
 
           <div className="sidebar-item"></div>
-          <button className="btn" onClick={help}>Help</button>
+          <button className="btn" onClick={help}>Explore Radar</button>
 
 
           <div className="sidebar-item"></div>

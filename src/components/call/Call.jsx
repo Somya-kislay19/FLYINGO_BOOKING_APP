@@ -1,52 +1,52 @@
 import React, { useState } from 'react';
 import './Call.css';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
-  const [query, setQuery] = useState('');
 
-  const handleQueryChange = (e) => {
-    setQuery(e.target.value);
+ 
+
+  const co1 = () => {
+    window.open('https://www.radarbox.com/', '_blank', 'fullscreen=yes');
   };
 
-  const handleSubmit = () => {
-    // Handle form submission logic (API call, etc.)
-    console.log("Query submitted:", query);
+  const flightStatus = () => {
+    window.open('https://www.flightstats.com/', '_blank');
   };
+  const navigate = useNavigate();
+
+  const cancellationInfo =()=>{
+    navigate("/re");
+  }
+
+  const baggageInfo =()=>{
+    navigate("/re");
+  }
+
+  const rescheduleFlight =()=>{
+    navigate("/rf");
+  }
 
   return (
     <div className="contact-container">
-      {/* Navbar */}
       <nav className="navbar">
         <h1 className="navbar-logo">FLYINGO</h1>
       </nav>
 
-      {/* Contact Us Section */}
       <div className="contact-body">
         <h2>Contact Us</h2>
-        <p>What's your query?</p>
-        
-        {/* Buttons for options */}
+        <p>How can we assist you today?</p>
+
         <div className="contact-buttons">
-          <button className="contact-option" onClick={() => setQuery('Want to know about flights')}>Want to know about flights</button>
-          <button className="contact-option" onClick={() => setQuery('Know flight current location')}>Know flight current location</button>
-          <button className="contact-option" onClick={() => setQuery('Still have a query? Call us')}>Still have a query? Call us</button>
+          <button className="contactoption" onClick={co1}>Want to know about flights</button>
+          <button className="contactoption" onClick={flightStatus}>Check Flight Status</button>
+          <button className="contactoption" onClick={cancellationInfo}>Cancellation/Refund Information</button>
+          <button className="contactoption" onClick={rescheduleFlight}>Reschedule Your Flight</button>
+          <button className="contactoption" onClick={baggageInfo}>Baggage Information</button>
         </div>
 
-        {/* Placeholder for user input */}
-        <textarea 
-          className="query-input" 
-          placeholder="Type your query here..." 
-          value={query} 
-          onChange={handleQueryChange}
-        />
-
-        {/* Submit button */}
-        <button className="contact-submit" onClick={handleSubmit}>Submit Query</button>
-        
-        {/* Placeholder for AI-like chat box */}
         <div className="chat-box">
           <p>Need quick help? Chat with our AI assistant!</p>
-          {/* Placeholder for future chat box feature */}
         </div>
       </div>
     </div>

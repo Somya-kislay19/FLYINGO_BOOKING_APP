@@ -3,28 +3,25 @@ import './Location.css';
 import { useNavigate } from 'react-router-dom';
 
 const Location = () => {
-  const [selectedCity, setSelectedCity] = useState(''); // State for selected city
-
-  const destinations = [
-    { name: 'Ranchi', image: 'path_to_ranchi_image' },
-    { name: 'Ahmedabad', image: 'path_to_ahmedabad_image' },
-    { name: 'Pune', image: 'path_to_pune_image' },
-    { name: 'Hyderabad', image: 'path_to_hyderabad_image' },
-    { name: 'Chennai', image: 'path_to_chennai_image' },
-    { name: 'Bangalore', image: 'path_to_bangalore_image' },
-    { name: 'Surat', image: 'path_to_surat_image' },
-    { name: 'Jamshedpur', image: 'path_to_jamshedpur_image' },
-    { name: 'Delhi', image: 'path_to_delhi_image' }
-  ];
-
-  const handleCityClick = (city) => {
-    setSelectedCity(city); // Update the selected city
-  };
+  const [selectedCity, setSelectedCity] = useState('');
   const navigate = useNavigate();
 
-  const f=()=>{
-    navigate("/f");
-  }
+  const destinations = [
+    { name: 'Ranchi', image: 'path_to_ranchi_image', route: '/ranchi' },
+    { name: 'Ahmedabad', image: 'path_to_ahmedabad_image', route: '/ahmedabad' },
+    { name: 'Pune', image: 'path_to_pune_image', route: '/pune' },
+    { name: 'Hyderabad', image: 'path_to_hyderabad_image', route: '/hyderabad' },
+    { name: 'Chennai', image: 'path_to_chennai_image', route: '/chennai' },
+    { name: 'Bangalore', image: 'path_to_bangalore_image', route: '/bangalore' },
+    { name: 'Surat', image: 'path_to_surat_image', route: '/surat' },
+    { name: 'Jamshedpur', image: 'path_to_jamshedpur_image', route: '/jamshedpur' },
+    { name: 'Delhi', image: 'path_to_delhi_image', route: '/delhi' }
+  ];
+
+  const handleCityClick = (city, route) => {
+    setSelectedCity(city);
+    navigate(route); 
+  };
 
   return (
     <div className="location-page">
@@ -39,7 +36,7 @@ const Location = () => {
           <div 
             key={destination.name} 
             className={`card ${selectedCity === destination.name ? 'selected' : ''}`}
-            onClick={() => handleCityClick(destination.name)}
+            onClick={() => handleCityClick(destination.name, destination.route)} // Pass route here
           >
             <img src={destination.image} alt={destination.name} className="card-image" />
             <div className="city-name">{destination.name}</div>
@@ -50,7 +47,6 @@ const Location = () => {
       {selectedCity && (
         <div className="selected-destination">
           <h3>You have selected: {selectedCity}</h3>
-          <button className="stay-button" onClick={f}>Show stays in {selectedCity}</button>
         </div>
       )}
     </div>

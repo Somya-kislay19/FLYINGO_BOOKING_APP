@@ -87,7 +87,7 @@ const Payment = () => {
                     />
                 </div>
                 <p>If the QR code does not work, please manually confirm your payment on the next page.</p>
-                <button onClick={() => navigate('/confirmation')}>Proceed to Confirmation</button>
+                <button className='bcf' onClick={() => navigate('/confirmation')}>Proceed to Confirmation</button>
             </div>
         </div>
     );

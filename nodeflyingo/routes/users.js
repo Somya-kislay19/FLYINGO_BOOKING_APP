@@ -1,53 +1,22 @@
-/*import express from 'express';
-import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
-
+const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 
-// Define a simple route to handle user requests
-router.get('/', (req, res) => {
-    res.send("User Router is working");
+const userSchema = new mongoose.Schema({
+    username: String,
+    mail: String,
+    pwd: String
+});
+const User = mongoose.model('User', userSchema);
+
+router.post('/register', async (req, res) => {
+    try {
+        const user = new User(req.body);
+        const savedUser = await user.save();
+        res.json(savedUser);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
 });
 
-export { router as userRouter };*/
-
-
-
-
-
-import express from 'express'
-
-import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
-import { UserModel } from '../models/User.js';
-
-
-const router = express.Router()
-
-router.post("/register" , async(req,res)=>{
-    const{username,password} = req.body;
-    const user = await UserModel.findOne({username: username});
-
-    res.json(user);
-    
-
-});
-router.post("/login");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export {router as userRouter}
-
+module.exports = router; 

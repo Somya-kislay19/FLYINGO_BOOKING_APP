@@ -28,6 +28,22 @@ import Subscribe from "./pages/Subs";
 import VisaRegistration from "./components/visa/VisaRegistration";
 import { Map } from "mapbox-gl";
 import MapC from "./pages/map/map";
+import Airindia from "./components/airindia/AirIndia";
+import RescheduleFlight from "./components/conf/Re";
+import Hb from "./pages/hotel/hb";
+import C from "./pages/hotel/C";
+import Re from "./components/conf/Re";
+import RHotel from "./pages/hotel/Rh";
+import Ahmed from "./pages/hotel/Rh copy";
+import Pune from "./pages/hotel/Ph";
+import Chennai from "./pages/hotel/Ch";
+import Bangalore from "./pages/hotel/Bh";
+import Jamshedpur from "./pages/hotel/Jh";
+import Delhi from "./pages/hotel/Dh";
+import Surat from "./pages/hotel/Sh";
+import Hyderabad from "./pages/hotel/Hy";
+import Rf from "./components/conf/rf";
+import We from "./pages/weather/We";
 
 function App() {
   return (
@@ -66,6 +82,23 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/confirmation" element={<ConfirmationPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/re" element={<RescheduleFlight />} />
+        <Route path="/rf" element={<Rf />} />
+
+        <Route path="/hb" element={<Re />} />
+        <Route path="/c" element={<C />} />
+
+
+        <Route path="/ranchi" element={<RHotel />} />
+        <Route path="/ahmedabad" element={<Ahmed />} />
+        <Route path="/pune" element={<Pune />} />
+        <Route path="/chennai" element={<Chennai />} />
+        <Route path="/bangalore" element={<Bangalore />} />
+        <Route path="/jamshedpur" element={<Jamshedpur />} />
+        <Route path="/delhi" element={<Delhi />} />
+        <Route path="/surat" element={<Surat />} />
+        <Route path="/hyderabad" element={<Hyderabad />} />
+
 
 
         <Route path="/flightoptions" element={<Visa />} />
@@ -85,7 +118,11 @@ function App() {
         <Route path="/availability" element={<AvailabilityPage />} />
         <Route path="/av" element={<AV />} />
 
-        <Route path="/more" element={<MapC/>} />
+        <Route path="/more" element={<We/>} />
+        <Route path="/aa" element={<Airindia/>} />
+        <Route path="/booking" element={<Intro/>} />
+
+
 
 
         

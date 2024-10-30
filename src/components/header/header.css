@@ -60,7 +60,7 @@
 }
 
 .headerSearch{
-    height: 30px;
+
     background-color: white;
     border: 3px solid #febb02;
     display: flex;
@@ -73,6 +73,7 @@
     width: 100%;
     max-width: 1024px;
     z-index: 2;
+    height: 55px;
 
 
 

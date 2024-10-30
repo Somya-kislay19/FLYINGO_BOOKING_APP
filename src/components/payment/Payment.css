@@ -57,6 +57,7 @@
   .bank-details {
     margin-top: 20px;
     background-color: #f9f9f9;
+    width: 100%;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -79,14 +80,14 @@
 
 
   .checkout-sidebar {
-    width: 20%; /* Sidebar occupies 20% of the screen width */
+    width: 20%; 
     background-color: #f0f0f0;
     padding: 20px;
-    padding-top: 80px; /* Adds spacing so sidebar content is below the navbar */
+    padding-top: 80px; 
     box-sizing: border-box;
-    height: 100vh; /* Full height of the screen */
-    position: fixed; /* Sticks sidebar on the left side */
-    top: 60px; /* Below the navbar */
+    height: 100vh; 
+    position: fixed; 
+    top: 60px; 
     left: 0;
   }
   
@@ -120,6 +121,9 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+  }
+  .bcf{
+margin-left: 40%;
   }
   
   button:hover {

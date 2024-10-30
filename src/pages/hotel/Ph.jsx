@@ -14,7 +14,7 @@ import {
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Hotel = () => {
+const Pune = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -374,4 +374,4 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+export default Pune;
