@@ -98,7 +98,10 @@ function App() {
         <Route path="/delhi" element={<Delhi />} />
         <Route path="/surat" element={<Surat />} />
         <Route path="/hyderabad" element={<Hyderabad />} />
-
+        <Route path="/airindia1" element={<AirIndia1 />} />
+        <Route path="/spicejet1" element={<Spicejet1 />} />
+        <Route path="/emirates1" element={<Emirates1 />} />
+        <Route path="/indigo1" element={<Indigo1 />} />
 
 
         <Route path="/flightoptions" element={<Visa />} />
