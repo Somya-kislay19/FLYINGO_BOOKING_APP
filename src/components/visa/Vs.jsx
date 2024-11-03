@@ -3,7 +3,7 @@ import "./visa.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 
-const Visa = () => {
+const Vs = () => {
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
@@ -124,4 +124,4 @@ const Visa = () => {
   );
 };
 
-export default Visa;
+export default Vs;

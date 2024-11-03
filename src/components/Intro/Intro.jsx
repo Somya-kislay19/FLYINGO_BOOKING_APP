@@ -7,45 +7,14 @@ const Intro= () => {
 
   const navigate = useNavigate();
 
-  const sjb = () => {
-    navigate("/sjb"); // Navigates to the Visa form page
-  };
-
-  const aib = () => {
-    navigate("/aib"); // Navigates to the Visa form page
-  };
-
-  const eib = () => {
-    navigate("/eib"); // Navigates to the Visa form page
-  };
-
-  const iib = () => {
-    navigate("/iib"); // Navigates to the Visa form page
-  };
-
-  const rv = () => {
-    navigate("/visa"); 
-
-    };
-
-  const help = () => {
-    navigate("/h"); 
-  };
-
-  const conc = () => {
-    navigate("/contact"); 
-  };
-
-  const b1 = () => {
-    navigate("/create"); 
-  };
-
-  const b2 = () => {
-    navigate("/create"); 
-  };
-  const b3 = () => {
-    navigate("/contact"); 
-  };
+  
+  const sjb = () => navigate("/sjb1");
+  const aib = () => navigate("/aib1");
+  const eib = () => navigate("/eib1");
+  const iib = () => navigate("/iib1");
+  const rv = () => navigate("/visa");
+  const help = () =>    window.open('https://www.radarbox.com/', '_blank', 'fullscreen=yes');
+  const conc = () => navigate("/contact");
 
 
   return (
@@ -91,7 +60,7 @@ const Intro= () => {
         <button className="btn" onClick={eib}>BOOK</button>
 
           </div>
-          <div className="card large-card">
+          <div className="card large-cardd">
           <img src={require('./indigo.jpg')} alt="Card 4" />
           <p>Indigo</p>
         <button className="btn" onClick={iib}>BOOK</button>
@@ -100,7 +69,6 @@ const Intro= () => {
         </div>
       </div>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="footer-left">
           <h2>FLYINGO</h2>

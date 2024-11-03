@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import './Indigo.css'; 
+import './Emirates.css'; 
 import { useNavigate } from "react-router-dom";
 
-const Indigo = () => {
+const Emirates1 = () => {
   const navigate = useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [userDetails, setUserDetails] = useState({});
 
     const ahandleAvailabilityClick = () => {
-        navigate("/indigobooking1");
+        navigate("/emiratesbooking");
       };
     
       useEffect(() => {
@@ -21,16 +21,13 @@ const Indigo = () => {
     return (
         <div className="airindia-page">
           <div className=''>Showing flights from 
-          <h1>Flight: {userDetails.flight}</h1>
-            <p>Departure: {userDetails.departure}</p>
-            <p>Arrival: {userDetails.arrival}</p>
-            <p>Date: 25th July 2024</p>
+         
           </div>
            <div className="searchItemsContainer">
       <div className="searchItem">
-        <img src={require('./i.jpg')} alt="Airline 1" className="fpImg" />
+        <img src={require('./e.jpg')} alt="Airline 1" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">IndiGo</h1>
+          <h1 className="siTitle">Emirates</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -55,9 +52,9 @@ const Indigo = () => {
       </div>
       
       <div className="searchItem">
-        <img src={require('./i.jpg')} alt="Airline 2" className="fpImg" />
+        <img src={require('./e.jpg')} alt="Airline 2" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">indigo</h1>
+          <h1 className="siTitle">Emirates</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -82,9 +79,9 @@ const Indigo = () => {
       </div>
 
       <div className="searchItem">
-        <img src={require('./i.jpg')} alt="Airline 3" className="fpImg" />
+        <img src={require('./e.jpg')} alt="Airline 3" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">indigo</h1>
+          <h1 className="siTitle">Emirates</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -109,9 +106,9 @@ const Indigo = () => {
       </div>
 
       <div className="searchItem">
-        <img src={require('./i.jpg')} alt="Airline 4" className="fpImg" />
+        <img src={require('./e.jpg')} alt="Airline 4" className="fpImg" />
         <div className="siDesc">
-          <h1 className="siTitle">Indigo</h1>
+          <h1 className="siTitle">Emirates</h1>
           <span className="siTaxiOp">Free airport taxi</span>
           <span className="siSubtitle">At your comfort</span>
           <span className="siFeatures"></span>
@@ -128,7 +125,6 @@ const Indigo = () => {
           <div className="siDetailTexts">
             <span className="siPrice">Rs.1220/- starting</span>
             <span className="siTaxOp">Includes taxes and fees</span>
-            
             <button className="siCheckButton" onClick={ahandleAvailabilityClick}>
               See availability
             </button>
@@ -144,4 +140,4 @@ const Indigo = () => {
     );
 };
 
-export default Indigo;
+export default Emirates1;

@@ -6,7 +6,7 @@ const VisaPage = () => {
   const navigate = useNavigate();
 
   const handleExploreClick = () => {
-    navigate("/visa1"); 
+    navigate("/vs"); 
   };
 
 

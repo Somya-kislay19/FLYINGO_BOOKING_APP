@@ -4,7 +4,7 @@ import QRCode from 'qrcode.react';
 import './Payment.css';
 import Navbar from '../navbar/Navbar'; 
 
-const Payment = () => {
+const Payment1 = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -42,8 +42,8 @@ const Payment = () => {
                 </ul>
                 <h2>Total Amount: Rs.{totalAmount}</h2>
                 <h2>User Details:</h2>
-                <p>Name: SOMYA KISLAY</p>
-                <p>Passport Number: 1234 ABCD 1A2B</p>
+                <p>Name: {userDetails.name}</p>
+                <p>Passport Number: {userDetails.passport}</p>
 
                 <div className="bank-details">
                     <h2>Bank Details</h2>
@@ -85,10 +85,11 @@ const Payment = () => {
                         includeMargin={true}
                     />
                 </div>
+                <p>If the QR code does not work, please manually confirm your payment on the next page.</p>
                 <button className='bcf' onClick={() => navigate('/confirmation')}>Proceed to Confirmation</button>
             </div>
         </div>
     );
 };
 
-export default Payment;
+export default Payment1;

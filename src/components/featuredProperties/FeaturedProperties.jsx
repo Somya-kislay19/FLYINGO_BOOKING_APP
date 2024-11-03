@@ -10,10 +10,10 @@ const navigate=useNavigate();
         navigate("/airindia")
     }
     const s=() =>{
-        navigate("/spicejet")
+        navigate("/spicejet1")
     }
     const e=() =>{
-        navigate("/emirates")
+        navigate("/emirates1")
     }
     const i=() =>{
         navigate("/indigo1")

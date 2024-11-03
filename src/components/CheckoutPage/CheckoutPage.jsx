@@ -46,9 +46,8 @@ const CheckoutPage = () => {
                 <h2>Total Amount: Rs.{totalAmount}</h2>
                 <h2>User Details:</h2>
                 <div className="user-details">
-                    <p>Name: {userDetails.name}</p>
-                    <p>Passport Number: {userDetails.passport}</p>
-                    <p>Flight Preference: {userDetails.flight}</p>
+                    <p>Name: SOMYA KISLAY</p>
+                    <p>Passport Number: 1234 ABCD 1A2B</p>
                 </div>
                 <button onClick={pay}>Proceed to Payment</button>
             </div>

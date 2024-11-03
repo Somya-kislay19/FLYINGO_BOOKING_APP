@@ -7,14 +7,14 @@ const Indigo1 = () => {
   
 
     const ahandleAvailabilityClick = () => {
-        navigate("/indigobooking");
+        navigate("/ibooking1");
       };
     
      
     
     return (
         <div className="airindia-page">
-          <div className=''>Showing flights from 
+          <div className=''>EXPLORE FLIGHTS
            
           </div>
            <div className="searchItemsContainer">

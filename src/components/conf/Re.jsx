@@ -9,7 +9,7 @@ const Re = () => {
   const [baggage, setBaggage] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevent form submission default behavior
+    e.preventDefault(); 
     console.log('Name:', name);
     console.log('Flight Number:', flightNumber);
     console.log('New Date:', newDate);

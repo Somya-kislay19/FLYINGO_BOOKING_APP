@@ -1,6 +1,8 @@
 .flight-details {
     padding: 20px;
     font-family: Arial, sans-serif;
+    margin-top: 9%;
+
 }
 
 .flight-details h1 {
@@ -38,6 +40,7 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    gap: 10px;
 }
 .l{
     background-color: #005bb54d;

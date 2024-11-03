@@ -45,9 +45,7 @@ const Contact = () => {
           <button className="contactoption" onClick={baggageInfo}>Baggage Information</button>
         </div>
 
-        <div className="chat-box">
-          <p>Need quick help? Chat with our AI assistant!</p>
-        </div>
+       
       </div>
     </div>
   );

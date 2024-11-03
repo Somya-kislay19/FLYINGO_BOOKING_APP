@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./visa.css";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../navbar/Navbar";
 
-const Visa = () => {
+const Visaex = () => {
   const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
@@ -15,7 +14,6 @@ const Visa = () => {
     if (!formData.passport) errors.passport = "Passport number is required";
     if (!formData.departure) errors.departure = "Departure location is required";
     if (!formData.arrival) errors.arrival = "Arrival location is required";
-    if (!selectedOption) errors.flight = "Please select a flight preference";
     return errors;
   };
 
@@ -45,7 +43,7 @@ const Visa = () => {
       } else if (selectedOption === "IndiGo") {
         navigate("/indigo");
       } else {
-        navigate("/hotels");
+        navigate("/payment1");
       }
     }
   };
@@ -59,11 +57,13 @@ const Visa = () => {
     setIsDropdownOpen(false);
   };
 
+  const s = () => {
+    navigate("/payment1"); 
+  };
+
   return (
     <div className="bg">
       <div className="visa-container">
-      <Navbar/>
-
         <form className="visa-form" onSubmit={handleSearch}>
           <h1 className="form-title">USER DETAILS</h1>
 
@@ -92,36 +92,15 @@ const Visa = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="flight">Flight Preference:</label>
-            <div className="dropdown-container">
-              <input
-                type="text"
-                id="flight"
-                name="flight"
-                value={selectedOption}
-                readOnly
-                placeholder="Select a flight"
-              />
-              <button type="button" className="arrow-btn" onClick={toggleDropdown}>
-                {isDropdownOpen ? '▲' : '▼'}
-              </button>
-              {isDropdownOpen && (
-                <div className="dropdown-menu">
-                  <a href="#" onClick={() => handleOptionClick("IndiGo")}>IndiGo</a>
-                  <a href="#" onClick={() => handleOptionClick("Air India")}>Air India</a>
-                  <a href="#" onClick={() => handleOptionClick("Spicejet")}>Spicejet</a>
-                  <a href="#" onClick={() => handleOptionClick("Emirates")}>Emirates</a>
-                </div>
-              )}
-            </div>
+            
             {formErrors.flight && <span className="error-message">{formErrors.flight}</span>}
           </div>
 
-          <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn" onClick={s}>Submit</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default Visa;
+export default Visaex;

@@ -2,20 +2,20 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Allows wrapping of items to avoid overlap */
+  flex-wrap: wrap; 
   height: 100vh;
   
   background-color: #e0f0ff;
 }
 
 .card {
-  background-color: #fff;
+  background: url('../../assests/sky.jpg') no-repeat center center/cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  height: 100px;  /* Reduced height */
-  width: 120px;   /* Reduced width */
-  margin: 10px;   /* Adds space between cards */
+  height: 100px;  
+  width: 80px;   
+  margin: 10px;   
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }

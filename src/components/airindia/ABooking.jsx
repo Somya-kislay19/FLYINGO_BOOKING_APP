@@ -39,7 +39,7 @@ const Abooking = () => {
         if (selectedSeats.length === 0) {
             toast.error("Please select at least one seat.");
         } else {
-            navigate('/checkout', { state: { selectedSeats } });
+            navigate('/visaex', { state: { selectedSeats } });
         }
     };
 
@@ -48,11 +48,7 @@ const Abooking = () => {
             <Navbar/>
         <div className="flight-details">
             <ToastContainer position="bottom-right"/>
-            <h1>Flight: {userDetails.flight}</h1>
-            <p>Departure: {userDetails.departure}</p>
-            <p>Arrival: {userDetails.arrival}</p>
-            <p>Date: 25th July 2024</p>
-            
+          
             <h2>Choose your seats</h2>
             <div className="seats">
                 {seats.map(seat => (

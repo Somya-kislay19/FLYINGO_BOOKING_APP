@@ -1,13 +1,13 @@
 import React from "react";
 import "./AvailabilityPage.css"
 import Navbar from "../navbar/Navbar";
-import Booking from "../booking/Booking";
+import Booking1 from "../booking/Booking1";
 
 const AvailabilityPage=()=>{
     return(
         <div className="">
 <Navbar/>
-<Booking/>
+<Booking1/>
         </div>
     )
 }

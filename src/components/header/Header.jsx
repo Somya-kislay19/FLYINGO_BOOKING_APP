@@ -75,12 +75,18 @@ const stay=()=>{
 
 }
 const flight=()=>{
+  navigate("/booking");
+
 
 }
 const taxi=()=>{
+  navigate("/userinfo");
+
 
 }
 const hotels=()=>{
+  navigate("/contact");
+
 
 };
 
@@ -98,11 +104,11 @@ const hotels=()=>{
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />
-            <button className="btn" onClick={taxi}>Airport Taxis</button> 
+            <button className="btn" onClick={taxi}>Visa</button> 
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <button className="btn" onClick={hotels}>Hotels</button> 
+            <button className="btn" onClick={hotels}>Help</button> 
           </div>
           
         </div>
