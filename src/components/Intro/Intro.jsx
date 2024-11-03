@@ -9,6 +9,7 @@ const Intro= () => {
 
   
   const sjb = () => navigate("/sjb2");
+  
   const aib = () => navigate("/aib2");
   const eib = () => navigate("/eib2");
   const iib = () => navigate("/iib2");
