@@ -7,7 +7,7 @@ const FeaturedProperties = () =>
 const navigate=useNavigate();
 
     const a=() =>{
-        navigate("/airindia")
+        navigate("/airindia1")
     }
     const s=() =>{
         navigate("/spicejet1")
