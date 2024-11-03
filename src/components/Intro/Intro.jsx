@@ -30,6 +30,7 @@ const Intro= () => {
           <div className="sidebar-item"></div>
           <button className="btn" onClick={rv}>Register for Visa</button>
 
+
           <div className="sidebar-item"></div>
           <button className="btn" onClick={help}>Explore Radar</button>
 
