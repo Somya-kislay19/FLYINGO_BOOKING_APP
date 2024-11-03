@@ -12,6 +12,11 @@ const navigate=useNavigate();
     const s=() =>{
         navigate("/spicejet1")
     }
+
+
+
+
+    
     const e=() =>{
         navigate("/emirates1")
     }
