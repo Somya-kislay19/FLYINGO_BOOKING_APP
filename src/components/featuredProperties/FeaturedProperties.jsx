@@ -23,7 +23,7 @@ return(
 <div className="featuredItem">
             <img src={require('./airindia.jpg')} alt="description" className="featuredImg"/>
 <div className="featuredTitles">
-<button className="bb" onClick={a} ><h1>AIR-INDIA FLIGHT</h1></button>
+<button className="bb" onClick={a} ><h1>AIR-INDIA FLIGHTS</h1></button>
 </div>
             </div>
             <div className="featuredItem">
