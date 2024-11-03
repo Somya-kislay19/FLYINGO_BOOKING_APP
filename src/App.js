@@ -64,10 +64,16 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/sjb" element={<Sj />} />
+        <Route path="/sjb2" element={<Sj />} />
+
         <Route path="/aib" element={<AirIndia />} />
+        <Route path="/aib2" element={<AirIndia />} />
+
         <Route path="/eib" element={<Emirates />} />
+        <Route path="/eib2" element={<Emirates />} />
+
         <Route path="/iib" element={<Indigo />} />
-        <Route path="/iib1" element={<Indigo />} />
+        <Route path="/iib2" element={<Indigo />} />
 
         <Route path="/location" element={<Location />} />
         <Route path="/f" element={<Hotel/>} />

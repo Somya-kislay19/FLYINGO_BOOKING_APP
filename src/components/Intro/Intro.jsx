@@ -8,10 +8,10 @@ const Intro= () => {
   const navigate = useNavigate();
 
   
-  const sjb = () => navigate("/sjb1");
-  const aib = () => navigate("/aib1");
-  const eib = () => navigate("/eib1");
-  const iib = () => navigate("/iib1");
+  const sjb = () => navigate("/sjb2");
+  const aib = () => navigate("/aib2");
+  const eib = () => navigate("/eib2");
+  const iib = () => navigate("/iib2");
   const rv = () => navigate("/visa");
   const help = () =>    window.open('https://www.radarbox.com/', '_blank', 'fullscreen=yes');
   const conc = () => navigate("/contact");

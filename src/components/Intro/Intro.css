@@ -1,13 +1,11 @@
-/* Container */
 .flyingo-container {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* Disable horizontal scrolling */
+  overflow-x: hidden; 
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,15 +34,13 @@
   color: white;
 }
 
-/* Main Content */
 .main-content {
   display: flex;
   flex: 1;
   padding: 20px;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto; 
 }
 
-/* Sidebar */
 .sidebar {
   width: 20%;
   background-color: #f0f0f0;
@@ -69,7 +65,6 @@
   color: white;
 }
 
-/* Cards Section */
 .cards-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -77,8 +72,8 @@
   width: 80%;
   padding-left: 20px;
   padding-left: 30%;
-  margin-top: 8%; /* Ensure the image stays within the card */
-  margin-bottom: 8%; /* Ensure the image stays within the card */
+  margin-top: 8%; 
+  margin-bottom: 8%;
 
 }
 
@@ -92,10 +87,9 @@
 }
 
 .card img {
-  width: 100%; /* Ensure the image scales horizontally */
-  height: 150px; /* Limit the image height */
+  width: 100%;
+  height: 150px; 
   object-fit: cover;
-   /* Maintain aspect ratio without cropping */
   border-radius: 10px;
   margin-bottom: 10px;
   
@@ -106,7 +100,6 @@
 }
 
 
-/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -124,9 +117,7 @@
   margin: 0;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  /* On tablets and phones, stack the cards in one column */
   .cards-section {
     grid-template-columns: 1fr;
     width: 100%;
