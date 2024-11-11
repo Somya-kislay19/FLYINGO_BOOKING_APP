@@ -16,11 +16,11 @@ const Login = () => {
                 email,password
             })
             .then(res=>{
-                if(res.data="exist"){
+                if(res.data==="exist"){
                     history("/",{state:{id:email}})
 
                 }
-                else if(res.data="notexist"){
+                else if(res.data==="notexist"){
                     alert("User is not signed up")
                 }
             })

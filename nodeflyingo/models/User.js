@@ -1,12 +1,24 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose")
+mongoose.connect("mongodb://localhost:27017/cluster0")
+.then(()=>{
+    console.log("mongodb connected");
+})
+.catch(()=>{
+    console.log('failed');
+})
 
-const UserSchema= new mongoose.Schema({
-    username: {type: String, required: true,unique:true},
-    mail: {type: String, required: true,unique:true},
-    pwd: {type: String, required: true},
+const  newSchema= mongoose.Schema({
+    email:{
+        type:String,
+        required:true
+    },
 
+    password:{
+        type:String,
+        required:true
+    }
+})
 
+const collection = mongoose.model("collection", newSchema)
 
-});
-
-export const UserModel = mongoose.model("users",UserSchema)
+module.exports=collection

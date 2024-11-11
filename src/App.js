@@ -54,6 +54,8 @@ import Vs from "./components/visa/Vs";
 import Emirates1 from "./components/Emirates/Emirates1";
 import Airindia1 from "./components/airindia/Airindia1";
 import Login from "./components/visa/Login";
+import SignInRegisterModal from "./components/header/SignInRegisterModal";
+import Signup from "./components/visa/Signup";
 
 
 function App() {
@@ -65,6 +67,8 @@ function App() {
 
         <Route path="/sjb" element={<Sj />} />
         <Route path="/sjb2" element={<Sj />} />
+        <Route path="/signup" element={<Signup/>} />
+
 
         <Route path="/aib" element={<AirIndia />} />
         <Route path="/aib2" element={<AirIndia />} />
