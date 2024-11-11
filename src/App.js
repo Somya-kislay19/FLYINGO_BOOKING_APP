@@ -68,6 +68,7 @@ function App() {
         <Route path="/sjb" element={<Sj />} />
         <Route path="/sjb2" element={<Sj />} />
         <Route path="/signup" element={<Signup/>} />
+        
 
 
         <Route path="/aib" element={<AirIndia />} />
