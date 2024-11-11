@@ -53,6 +53,7 @@ import Visa from './components/visa/Visa';
 import Vs from "./components/visa/Vs";
 import Emirates1 from "./components/Emirates/Emirates1";
 import Airindia1 from "./components/airindia/Airindia1";
+import Login from "./components/visa/Login";
 
 
 function App() {
@@ -97,7 +98,7 @@ function App() {
 
         <Route path="/id" element={<Visa />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/create" element={<Form />} />
+        <Route path="/create" element={<Login />} />
         <Route path="/userInfo" element={<VisaPage />} />
         <Route path="/gotovisa" element={<Visa />} />
         <Route path="/payment" element={<Payment />} />
