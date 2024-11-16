@@ -13,8 +13,8 @@ const WeatherApp = () => {
       return;
     }
     try {
-      const API_KEY = "634524179037696037483168f5933553"; // Replace with your Weatherstack API key
-      const url = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}`;
+      const API_KEYY = "634524179037696037483168f5933553"; 
+      const url = `http://api.weatherstack.com/current?access_key=${API_KEYY}&query=${city}`;
       const response = await fetch(url);
 
       if (!response.ok) {
