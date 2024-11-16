@@ -3,6 +3,9 @@ import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 
 function Login(){
+    const history=useNavigate()
+
+
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
 
@@ -11,6 +14,19 @@ function Login(){
         try{
             await axios.post("http://localhost:3000/",{
                 email,password
+            })
+            .then(res=>{
+                if(res.data="exist"){
+                    history("/homu",{state:{id:email}})
+
+                }
+                else if(res.data="notexist"){
+                    alert("User is not signed up")
+                }
+            })
+            .catch(e=>{
+                alert("Wrong Details")
+                console.log(e);
             })
         }
     

@@ -1,118 +1,141 @@
-/* Full-page container */
-.weather-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to top, #a2c9e2, #f0f4f8);
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    color: #2d3e50;
-  }
-  
-  /* Header styling */
-  .header h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #ff5722;
-    margin-top: 20px;
-  }
-  
-  /* Main weather container */
-  .weather {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    margin-top: 30px;
-    margin-bottom: 8%;
+/* General Styles */
 
+
+/* Weather App Container */
+.weather-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  text-align: center;
+  width: 100%;
+  margin-left: 35%;
+  margin-top: 10%;
+  max-width: 400px;
+}
+
+/* Title */
+.app-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #023e8a;
+  transform: scale(1.1);
+}
+
+/* Error Message */
+.error-message {
+  color: #ff4b5c;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Weather Information */
+.weather-info {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  /* Search bar container */
-  .search-bar {
-    display: flex;
-    gap: 10px;
-    width: 100%;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .search-input {
-    flex-grow: 1;
-    padding: 12px;
-    border: 2px solid #ff5722;
-    border-radius: 20px;
-    outline: none;
+}
+
+.location {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #f1f1f1;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #ffd166;
+}
+
+.weather-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: #f9f9f9;
+}
+
+/* Additional Info */
+.additional-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.additional-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #d1d1d1;
+}
+
+.additional-info p:first-child {
+  font-weight: bold;
+}
+
+/* Weather Icon */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .weather-container {
+    padding: 20px;
   }
-  
-  .search-btn {
-    padding: 12px 20px;
-    background-color: #ff5722;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
+
+  .app-title {
+    font-size: 22px;
   }
-  
-  /* Weather details container */
-  .weather-details {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .weather-icon {
-    width: 120px;
-    margin-top: 10px;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
-  }
-  
-  .temp-location {
-    margin-top: 10px;
-  }
-  
+
   .temperature {
-    font-size: 48px;
-    font-weight: 600;
-    color: #ff5722;
+    font-size: 36px;
   }
-  
-  .location {
-    font-size: 24px;
-    color: #555;
-    margin-top: -10px;
-  }
-  
-  /* Extra weather info */
-  .extra-info {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  
-  .info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100px;
-  }
-  
-  .info-item p {
-    margin: 5px 0;
-    font-weight: bold;
-    color: #555;
-  }
-  
+}

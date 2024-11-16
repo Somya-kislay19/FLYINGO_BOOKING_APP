@@ -1,78 +1,77 @@
-import React, { useEffect, useState } from 'react';
-import "./we.css";
-import clear_icon from "../../assests/sky.jpg";
-const We = () => {
-const [weatherData, setWeatherData] = useState(false);
+import React, { useState } from "react";
+import "./we.css"; // Link to the CSS file
 
-const allicons = {
-    "01d":clear_icon
-}
+const WeatherApp = () => {
+  const [weatherData, setWeatherData] = useState(null);
+  const [city, setCity] = useState("");
+  const [error, setError] = useState("");
 
-
-    const search = async (city) =>{
-        try{
-            const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.REACT_APP_API_KEY}`;
-
-
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data);
-            
-            setWeatherData({
-                humidity : data.main.humidity,
-                windSpeed : data.wind.speed,
-                temperature : Math.floor(data.main.temp),
-                location: data.name
-            })
-        } catch (error) {
-
-        }
+  const fetchWeather = async () => {
+    setError(""); // Clear previous errors
+    if (!city.trim()) {
+      setError("Please enter a city name");
+      return;
     }
+    try {
+      const API_KEY = "634524179037696037483168f5933553"; // Replace with your Weatherstack API key
+      const url = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}`;
+      const response = await fetch(url);
 
-    useEffect(()=>{
-        search("London");
-    },[])
+      if (!response.ok) {
+        throw new Error("Failed to fetch weather data");
+      }
+
+      const data = await response.json();
+
+      if (data.error) {
+        throw new Error(data.error.info || "City not found");
+      }
+
+      setWeatherData({
+        temperature: data.current.temperature,
+        location: data.location.name,
+        country: data.location.country,
+        weatherDescription: data.current.weather_descriptions[0],
+        windSpeed: data.current.wind_speed,
+        humidity: data.current.humidity,
+        weatherIcon: data.current.weather_icons[0],
+      });
+    } catch (error) {
+      setWeatherData(null);
+      setError(error.message);
+    }
+  };
+
   return (
-    <div className="weather-page">
-      <div className="header">
-        <h1>Weather Forecast</h1>
+    <div className="weather-container">
+      <h1 className="app-title">Weather App</h1>
+      <div className="search-bar">
+        <input
+          type="text"
+          className="search-input"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="Enter city name"
+        />
+        <button className="search-button" onClick={fetchWeather}>
+          Search
+        </button>
       </div>
-
-      <div className="weather">
-        <div className="search-bar">
-          <input type="text" placeholder="Search city" className="search-input" />
-          <button className="search-btn">Search</button>
-        </div>
-
-        <div className="weather-details">
-          <img src={require('./sky.jpg')} alt="weather icon" className="weather-icon" />
-          <div className="temp-location">
-            <p className="temperature">16°C</p>
-            <p className="location">London</p>
+      {error && <p className="error-message">{error}</p>}
+      {weatherData && (
+        <div className="weather-info">
+          <h2 className="location">{weatherData.location}, {weatherData.country}</h2>
+          <img src={weatherData.weatherIcon} alt="Weather Icon" className="weather-icon" />
+          <p className="temperature">{weatherData.temperature}°C</p>
+          <p className="weather-description">{weatherData.weatherDescription}</p>
+          <div className="additional-info">
+            <p>Humidity: {weatherData.humidity}%</p>
+            <p>Wind Speed: {weatherData.windSpeed} km/h</p>
           </div>
         </div>
-
-        <div className="extra-info">
-          <div className="info-item">
-            <p>Humidity</p>
-            <p>78%</p>
-          </div>
-          <div className="info-item">
-            <p>Wind</p>
-            <p>5 km/h</p>
-          </div>
-          <div className="info-item">
-            <p>Sunrise</p>
-            <p>6:45 AM</p>
-          </div>
-          <div className="info-item">
-            <p>Sunset</p>
-            <p>5:52 PM</p>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
-}
+};
 
-export default We;
+export default WeatherApp

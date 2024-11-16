@@ -1,0 +1,160 @@
+/* Flight App Container */
+.flight-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(to bottom, #003973, #e5e5be);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Flights Section */
+.flights-section {
+  flex: 3;
+  padding-right: 20px;
+}
+
+/* Title */
+.app-title {
+  font-size: 28px;
+  color: #003973;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #003973;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #002d62;
+}
+
+/* Error Message */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Flight List */
+.flight-list {
+  margin-top: 20px;
+}
+
+.flight-card {
+  background: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.flight-card h3 {
+  margin-top: 0;
+  color: #003973;
+}
+
+.flight-card p {
+  margin: 5px 0;
+}
+
+.flight-card strong {
+  color: #333;
+}
+
+.add-cart-button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-cart-button:hover {
+  background-color: #218838;
+}
+
+/* Cart Section */
+.cart-section {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.cart-section h2 {
+  margin-top: 0;
+  color: #003973;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.remove-cart-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-cart-button:hover {
+  background-color: #c82333;
+}
+
+.confirm-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}

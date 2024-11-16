@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
+
 import Home from "./pages/home/Home";
 import Hotel from "./pages/hotel/Hotel";
 import AvailabilityPage from "./components/av/AvailabilityPage";
@@ -56,14 +58,30 @@ import Airindia1 from "./components/airindia/Airindia1";
 import Login from "./components/visa/Login";
 import SignInRegisterModal from "./components/header/SignInRegisterModal";
 import Signup from "./components/visa/Signup";
+import CartPage from "./components/featured/Cart";
+import Success from "./components/CheckoutPage/Wc";
+import Checkout from "./components/CheckoutPage/CheckoutPage";
+import AirportDBPage from "./pages/weather/Taxi";
 
 
-function App() {
+
+const App = () => {
+  const [cart, setCart] = useState([]);
+  const [userDetails, setUserDetails] = useState({ name: "", email: "", phone: "" });
+  
+
   return (
   
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/hotels" element={<CartPage />} />
+        <Route path="/home" element={<Home />} />
+
+
+        <Route path="/" element={<Success setUserDetails={setUserDetails} />} />
+        <Route path="/checkout" element={<Checkout userDetails={userDetails} />} />
+
+
 
         <Route path="/sjb" element={<Sj />} />
         <Route path="/sjb2" element={<Sj />} />
@@ -95,14 +113,14 @@ function App() {
         <Route path="/hotel" element={<Hotel />} />
 
         <Route path="/hotel" element={<Hotel />} />
-        <Route path="/hotels" element={<Intro />} />
         <Route path="/hotels/:id" element={<Hotel />} />
         <Route path="/choose-airlines" element={<Hotel />} />
         <Route path="/visa" element={<VisaPage />} />
         <Route path="/visa1" element={<Visaex />} />
 
         <Route path="/id" element={<Visa />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/checkoutt" element={<Success />} />
+
         <Route path="/create" element={<Login />} />
         <Route path="/userInfo" element={<VisaPage />} />
         <Route path="/gotovisa" element={<Visa />} />
@@ -157,10 +175,12 @@ function App() {
         <Route path="/search" element={<SearchItem />} />
         <Route path="/availability" element={<AvailabilityPage />} />
         <Route path="/av" element={<AV />} />
+        <Route path="/taxi" element={<AirportDBPage />} />
+
 
         <Route path="/more" element={<We/>} />
         <Route path="/aa" element={<Airindia/>} />
-        <Route path="/booking" element={<Intro/>} />
+        <Route path="/booking" element={<CartPage/>} />
         <Route path="/vs" element={<Vs/>} />
 
         
