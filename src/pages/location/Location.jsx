@@ -14,7 +14,7 @@ const Location = () => {
     { name: 'Chennai', image: 'path_to_chennai_image', route: '/chennai' },
     { name: 'Bangalore', image: 'path_to_bangalore_image', route: '/bangalore' },
     { name: 'Surat', image: 'path_to_surat_image', route: '/surat' },
-    { name: 'Jamshedpur', image: 'path_to_jamshedpur_image', route: '/jamshedpur' },
+    { name: 'Jamshedpur', image: 'D:\booking\src\pages\location\a.jpg', route: '/jamshedpur' },
     { name: 'Delhi', image: 'path_to_delhi_image', route: '/delhi' }
   ];
 
@@ -35,10 +35,10 @@ const Location = () => {
         {destinations.map((destination) => (
           <div 
             key={destination.name} 
-            className={`card ${selectedCity === destination.name ? 'selected' : ''}`}
-            onClick={() => handleCityClick(destination.name, destination.route)} // Pass route here
+            className={`carrd ${selectedCity === destination.name ? 'selected' : ''}`}
+            onClick={() => handleCityClick(destination.name, destination.route)} 
           >
-            <img src={destination.image} alt={destination.name} className="card-image" />
+            <img src={destination.image} alt={destination.name} className="carrd-image" />
             <div className="city-name">{destination.name}</div>
           </div>
         ))}

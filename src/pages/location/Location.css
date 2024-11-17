@@ -20,39 +20,38 @@
     margin-bottom: 30px;
 }
 
-/* Align 5 cards per row, with space between them */
 .destination-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 5 cards per row */
-    gap: 80px; /* Space between cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 80px; 
     margin-bottom: 30px;
     padding-left: 3%;
     padding-right: 1%;
 }
-.card {
+.carrd {
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
-    height: 200px; /* Fixed height for uniformity */
+    height: 200px;
 width: 80%;
 
 }
 
 
 
-.card:hover {
+.carrd:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-color: #003580;
 }
 
-.card-image {
+.carrd-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Image covers the card */
+    object-fit: cover; 
 }
 
 .city-name {
@@ -68,7 +67,7 @@ width: 80%;
     transition: font-size 0.3s ease;
 }
 
-.card:hover .city-name {
+.carrd:hover .city-name {
     font-size: 22px;
 }
 
@@ -94,17 +93,15 @@ width: 80%;
     background-color: #004b85;
 }
 
-/* Responsive for smaller screens: align 2 cards per row on mobile */
 @media (max-width: 768px) {
     .destination-cards {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
-        gap: 15px; /* Adjust space between cards */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
     }
 }
 
-/* For tablet screens: 3 cards per row */
 @media (max-width: 1024px) {
     .destination-cards {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row on tablet */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }

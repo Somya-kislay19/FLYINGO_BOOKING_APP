@@ -7,6 +7,11 @@ function Login(){
 
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
+    const navigate=useNavigate();
+
+    const submit=()=>{
+        navigate("/home")
+    }
 
     async function submit (e){
         e.preventDefault();

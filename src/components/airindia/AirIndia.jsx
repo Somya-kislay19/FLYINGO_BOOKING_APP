@@ -2,153 +2,146 @@ import React, { useEffect, useState } from 'react';
 import './AirIndia.css'; 
 import { useNavigate } from "react-router-dom";
 import Navbar from '../navbar/Navbar';
+import Navbarr from '../navbar/Navbar copy';
 
-const Airindia = () => {
+const AirIndia = () => {
   const navigate = useNavigate();
-  const [selectedSeats, setSelectedSeats] = useState([]);
   const [userDetails, setUserDetails] = useState({});
 
-    const ahandleAvailabilityClick = () => {
-        navigate("/airindiabooking");
-      };
-    
-      useEffect(() => {
-        const details = JSON.parse(localStorage.getItem('userDetails'));
-        if (details) {
-            setUserDetails(details);
-        }
-    }, []);
-    
-    return (
-    <div className='k'> <Navbar/>
-     
+  const ahandleAvailabilityClick = (flightId) => {
+    // Pass flightId or other details to the booking page if needed
+    navigate("/airindiabooking", { state: { flightId } });
+  };
 
-        <div className="airindia-page">
-          <div className='j'><h1>hello</h1></div>
-          
+  useEffect(() => {
+    const details = JSON.parse(localStorage.getItem('userDetails'));
+    if (details) {
+      setUserDetails(details);
+    }
+  }, []);
 
-          <div className='p'>
-          <h1><span className="flight-gradient">Flight: {userDetails.flight}</span></h1>    
-                  <p>Departure: {userDetails.departure}</p>
-            <p>Arrival: {userDetails.arrival}</p>
-            <p>Date: 25th July 2024</p>
-          </div>
-           <div className="searchItemsContainer">
-      <div className="searchItem">
-        <img src={require('./a.jpg')} alt="Airline 1" className="fpImg" />
-        <div className="siDesc">
-          <h1 className="siTitle">Air India-MH30</h1>
-          <span className="siTaxiOp">Free airport taxi</span>
-          <span className="siSubtitle">At your comfort</span>
-          <span className="siFeatures"></span>
-          <span className="siCancelOp">Free cancellation</span>
-          <span className="siCancelOpSubtitle">
-            You can cancel later, so lock in this great price today!
-          </span>
-        </div>
-        <div className="siDetails">
-          <div className="siRating">
-            <span>Excellent</span>
-            <button>8.9</button>
-          </div>
-          <div className="siDetailTexts">
-            <span className="siPrice">Rs.1102/- starting</span>
-            <span className="siTaxOp">Includes taxes and fees</span>
-            <button className="siCheckButton" onClick={ahandleAvailabilityClick}>
-              See availability
-            </button>
-          </div>
-        </div>
+  const flights = [
+    {
+      id: 1,
+      airline: "Air India",
+      flightNo: "AI-302",
+      route: "Delhi - Mumbai",
+      price: 5200,
+      rating: 8.9,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business", "First Class"],
+    },
+    {
+      id: 2,
+      airline: "Air India",
+      flightNo: "EK-505",
+      route: "Mumbai - Dubai",
+      price: 18200,
+      rating: 9.5,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+    {
+      id: 3,
+      airline: "Air India",
+      flightNo: "6E-112",
+      route: "Kolkata - Bangalore",
+      price: 4200,
+      rating: 8.7,
+      image: require('./a.jpg'),
+      classOptions: ["Economy"],
+    },
+    {
+      id: 4,
+      airline: "Air India",
+      flightNo: "SG-302",
+      route: "Chennai - Hyderabad",
+      price: 3900,
+      rating: 8.0,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+    {
+      id: 4,
+      airline: "Air India",
+      flightNo: "SG-302",
+      route: "Chennai - Hyderabad",
+      price: 3900,
+      rating: 8.0,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+    {
+      id: 4,
+      airline: "Air India",
+      flightNo: "SG-302",
+      route: "Chennai - Hyderabad",
+      price: 3900,
+      rating: 8.0,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+    {
+      id: 4,
+      airline: "Air India",
+      flightNo: "SG-302",
+      route: "Chennai - Hyderabad",
+      price: 3900,
+      rating: 8.0,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+    {
+      id: 4,
+      airline: "Air India",
+      flightNo: "SG-302",
+      route: "Chennai - Hyderabad",
+      price: 3900,
+      rating: 8.0,
+      image: require('./a.jpg'),
+      classOptions: ["Economy", "Business"],
+    },
+  ];
+
+  return (
+    <div className='airindia-container'>
+      <Navbarr />
+      <div className='airindia-header'>
+        <h1 className='airindia-title'>Explore and Book Flights</h1>
+        <p className='airindia-subtitle'>Find the best deals and enjoy a seamless travel experience.</p>
       </div>
-      
-      <div className="searchItem">
-        <img src={require('./a.jpg')} alt="Airline 2" className="fpImg" />
-        <div className="siDesc">
-          <h1 className="siTitle">Air India-boeing 777</h1>
-          <span className="siTaxiOp">Free airport taxi</span>
-          <span className="siSubtitle">At your comfort</span>
-          <span className="siFeatures"></span>
-          <span className="siCancelOp">Free cancellation</span>
-          <span className="siCancelOpSubtitle">
-            You can cancel later, so lock in this great price today!
-          </span>
-        </div>
-        <div className="siDetails">
-          <div className="siRating">
-            <span>Excellent</span>
-            <button>9.9</button>
+      <div className='flights-grid'>
+        {flights.map((flight) => (
+          <div key={flight.id} className='flight-card'>
+            <img src={flight.image} alt={flight.airline} className='flight-image' />
+            <div className='flight-details'>
+              <h2 className='flight-title'>{flight.airline}</h2>
+              <p className='flight-route'>{flight.route}</p>
+              <p className='flight-info'>Flight No: {flight.flightNo}</p>
+              <p className='flight-price'>Starting at ₹{flight.price}</p>
+              <div className='flight-rating'>
+                <span>Rating: {flight.rating}</span>
+              </div>
+              <div className='flight-classes'>
+                <span>Available Classes:</span>
+                <ul>
+                  {flight.classOptions.map((cls, index) => (
+                    <li key={index} className='class-option'>{cls}</li>
+                  ))}
+                </ul>
+              </div>
+              <button
+                className='availability-button'
+                onClick={() => ahandleAvailabilityClick(flight.id)}
+              >
+                See Availability
+              </button>
+            </div>
           </div>
-          <div className="siDetailTexts">
-            <span className="siPrice">Rs.1320/- starting</span>
-            <span className="siTaxOp">Includes taxes and fees</span>
-            <button className="siCheckButton" onClick={ahandleAvailabilityClick}>
-              See availability
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
-
-      <div className="searchItem">
-        <img src={require('./a.jpg')} alt="Airline 3" className="fpImg" />
-        <div className="siDesc">
-          <h1 className="siTitle">Spicejet</h1>
-          <span className="siTaxiOp">Free airport taxi</span>
-          <span className="siSubtitle">At your comfort</span>
-          <span className="siFeatures"></span>
-          <span className="siCancelOp">Free cancellation</span>
-          <span className="siCancelOpSubtitle">
-            You can cancel later, so lock in this great price today!
-          </span>
-        </div>
-        <div className="siDetails">
-          <div className="siRating">
-            <span>Excellent</span>
-            <button>8.0</button>
-          </div>
-          <div className="siDetailTexts">
-            <span className="siPrice">Rs.1020/- starting</span>
-            <span className="siTaxOp">Includes taxes and fees</span>
-            <button className="siCheckButton" onClick={ahandleAvailabilityClick}>
-              See availability
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="searchItem">
-        <img src={require('./a.jpg')} alt="Airline 4" className="fpImg" />
-        <div className="siDesc">
-          <h1 className="siTitle">Emirates</h1>
-          <span className="siTaxiOp">Free airport taxi</span>
-          <span className="siSubtitle">At your comfort</span>
-          <span className="siFeatures"></span>
-          <span className="siCancelOp">Free cancellation</span>
-          <span className="siCancelOpSubtitle">
-            You can cancel later, so lock in this great price today!
-          </span>
-        </div>
-        <div className="siDetails">
-          <div className="siRating">
-            <span>Excellent</span>
-            <button>8.9</button>
-          </div>
-          <div className="siDetailTexts">
-            <span className="siPrice">Rs.1220/- starting</span>
-            <span className="siTaxOp">Includes taxes and fees</span>
-            <button className="siCheckButton" onClick={ahandleAvailabilityClick}>
-              See availability
-            </button>
-          </div>
-        </div>
-      </div>
-
-      
-
-    
     </div>
-        </div>
-        </div>
-    );
+  );
 };
 
-export default Airindia;
+export default AirIndia;

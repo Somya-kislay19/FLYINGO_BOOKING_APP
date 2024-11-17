@@ -40,10 +40,7 @@ const Payment = () => {
                         </li>
                     ))}
                 </ul>
-                <h2>Total Amount: Rs.{totalAmount}</h2>
-                <h2>User Details:</h2>
-                <p>Name: SOMYA KISLAY</p>
-                <p>Passport Number: 1234 ABCD 1A2B</p>
+               
 
                 <div className="bank-details">
                     <h2>Bank Details</h2>

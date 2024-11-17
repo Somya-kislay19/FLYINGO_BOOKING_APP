@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./we.css"; // Link to the CSS file
+import "./we.css"; 
 
 const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -7,14 +7,14 @@ const WeatherApp = () => {
   const [error, setError] = useState("");
 
   const fetchWeather = async () => {
-    setError(""); // Clear previous errors
+    setError(""); 
     if (!city.trim()) {
       setError("Please enter a city name");
       return;
     }
     try {
       const API_KEYY = "634524179037696037483168f5933553"; 
-      const url = `http://api.weatherstack.com/current?access_key=${API_KEYY}&query=${city}`;
+      const url = `/api/weather?city=${city}`;
       const response = await fetch(url);
 
       if (!response.ok) {

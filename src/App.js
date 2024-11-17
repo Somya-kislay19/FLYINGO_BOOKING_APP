@@ -74,7 +74,7 @@ const App = () => {
   
     <BrowserRouter>
       <Routes>
-        <Route path="/hotels" element={<CartPage />} />
+        <Route path="/hotels" element={<Intro />} />
         <Route path="/home" element={<Home />} />
 
 
@@ -83,8 +83,7 @@ const App = () => {
 
 
 
-        <Route path="/sjb" element={<Sj />} />
-        <Route path="/sjb2" element={<Sj />} />
+        <Route path="/sjb2" element={<Spicejet />} />
         <Route path="/signup" element={<Signup/>} />
         
 
@@ -125,7 +124,7 @@ const App = () => {
         <Route path="/userInfo" element={<VisaPage />} />
         <Route path="/gotovisa" element={<Visa />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/payment1" element={<Payment1 />} />
+        <Route path="/payment1" element={<Payment />} />
 
         <Route path="/confirmation" element={<ConfirmationPage />} />
         <Route path="/contact" element={<Contact />} />
@@ -180,7 +179,7 @@ const App = () => {
 
         <Route path="/more" element={<We/>} />
         <Route path="/aa" element={<Airindia/>} />
-        <Route path="/booking" element={<CartPage/>} />
+        <Route path="/booking" element={<Intro/>} />
         <Route path="/vs" element={<Vs/>} />
 
         

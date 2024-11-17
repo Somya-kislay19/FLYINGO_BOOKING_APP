@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -6,6 +7,7 @@ const Signup = () => {
     email: '',
     password: '',
   });
+const navigate=useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -19,6 +21,9 @@ const Signup = () => {
     // Add signup logic here (e.g., send data to server)
     console.log('Signup successful:', formData);
   };
+  const handleSignUp=()=>{
+    navigate("/home")
+  }
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -57,9 +62,21 @@ const Signup = () => {
             style={{ width: '100%', padding: '8px', marginTop: '5px' }}
           />
         </div>
-        <button type="submit" style={{ width: '100%', padding: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
-          Sign Up
-        </button>
+        <button
+      type="button"
+      style={{
+        width: "100%",
+        padding: "10px",
+        backgroundColor: "#4CAF50",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer",
+      }}
+      onClick={handleSignUp} // Attach the click handler
+    >
+      Sign Up
+    </button>
       </form>
     </div>
   );
