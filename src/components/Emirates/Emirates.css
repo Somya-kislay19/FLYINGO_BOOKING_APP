@@ -1,36 +1,25 @@
-/* General Styling */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+.airindia-container {
+  padding: 20px;
 }
 
-/* Header Section */
 .airindia-header {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(135deg, #007BFF, #6C63FF);
-  color: white;
   margin-bottom: 20px;
-  border-radius: 10px;
 }
 
 .airindia-title {
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
 .airindia-subtitle {
   font-size: 1.2rem;
+  color: #555;
 }
 
-/* Flights Grid */
 .flights-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
 }
 
 .flight-card {
@@ -38,7 +27,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  padding: 15px;
+  transition: transform 0.3s;
 }
 
 .flight-card:hover {
@@ -47,71 +37,62 @@ body {
 
 .flight-image {
   width: 100%;
-  height: 180px;
+  height: 150px;
   object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .flight-details {
-  padding: 20px;
+  text-align: left;
 }
 
 .flight-title {
   font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #007BFF;
-  margin-bottom: 10px;
 }
 
-.flight-route {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 10px;
+.flight-reviews {
+  margin-top: 15px;
 }
 
-.flight-info {
-  font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 10px;
-}
-
-.flight-price {
-  font-size: 1.2rem;
-  color: #28a745;
-  margin-bottom: 15px;
-}
-
-.flight-rating {
-  font-size: 0.9rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.flight-classes {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.class-option {
-  display: inline-block;
-  background: #f1f1f1;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-  font-size: 0.8rem;
+.flight-reviews h4 {
+  margin-bottom: 5px;
 }
 
 .availability-button {
-  display: block;
-  width: 100%;
   padding: 10px;
-  background: #007BFF;
+  font-size: 1rem;
   color: white;
+  background: #007BFF;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  margin-right: 10px;
 }
 
-.availability-button:hover {
-  background: #0056b3;
+.availability-button.secondary {
+  background: #6c757d;
+}
+
+.selected-flights-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.selected-flight {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.selected-flight button {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }

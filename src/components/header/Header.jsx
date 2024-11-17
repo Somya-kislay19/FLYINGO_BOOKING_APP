@@ -100,6 +100,10 @@ const hotels=()=>{
     <div className="header">
       <div className={type === "list" ? "headerContainer listMode" : "headerContainer"}>
         <div className="headerList">
+        <div className="headerListItem">
+            <FontAwesomeIcon icon={faCar} />
+            <button className="btn" onClick={taxi}>Taxi</button> 
+          </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <button className="btn" onClick={stay}>Stays</button> 
@@ -112,10 +116,7 @@ const hotels=()=>{
             <FontAwesomeIcon icon={faCar} />
             <button className="btn" onClick={visa}>Visa</button> 
           </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faCar} />
-            <button className="btn" onClick={taxi}>Taxi</button> 
-          </div>
+          
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
             <button className="btn" onClick={hotels}>Help</button> 

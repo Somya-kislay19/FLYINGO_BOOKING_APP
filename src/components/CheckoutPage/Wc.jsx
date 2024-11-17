@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Success.css";
 import Navbar from "../navbar/Navbar";
+import Navbarr from "../navbar/Navbar copy";
 
 const Success = ({ setUserDetails }) => {
   const [name, setName] = useState("");
@@ -25,7 +26,6 @@ const Success = ({ setUserDetails }) => {
 
   return (
     <div className="success-container">
-      <Navbar/>
       <h1 className="success-title">
         Welcome to <span className="highlight">Flyingo</span>
       </h1>

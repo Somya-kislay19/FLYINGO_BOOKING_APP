@@ -1,29 +1,118 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  thead {
-    background-color: #f4f4f4;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
-  }
-  
-  button {
-    padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
+
+
+.taxi-service-container {
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.taxi-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.taxi-card {
+  background: linear-gradient(to bottom, #0f5faff1, #e5e5be);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taxi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.select-button {
+  background: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.select-button:hover {
+  background: #0056b3;
+}
+
+.select-button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.booking-box {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.booking-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+.selected-taxis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selected-taxi {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.selected-taxi button {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-details label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.booking-details input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirm-button {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.confirm-button:hover {
+  background: #218838;
+}
