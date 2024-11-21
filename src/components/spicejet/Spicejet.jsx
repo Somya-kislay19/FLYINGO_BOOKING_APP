@@ -9,7 +9,7 @@ const Spicejet = () => {
   const [selectedFlights, setSelectedFlights] = useState([]);
 
   const v=()=>{
-    navigate("/.vir")
+    navigate("./vir")
   }
 
   const flights = [
