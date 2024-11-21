@@ -32,6 +32,7 @@ const Location = () => {
         <h2>What's your destination?</h2>
         <p>Select your destination</p>
       </div>
+      
 
 
 
