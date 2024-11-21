@@ -33,6 +33,8 @@ const Location = () => {
         <p>Select your destination</p>
       </div>
 
+
+
       <div className="destination-cards">
         {destinations.map((destination) => (
           <div 
