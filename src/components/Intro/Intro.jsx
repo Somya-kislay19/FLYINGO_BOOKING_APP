@@ -14,6 +14,8 @@ const Intro = () => {
   const help = () => window.open('https://www.radarbox.com/', '_blank', 'fullscreen=yes');
   const conc = () => navigate("/contact");
 
+  
+
   return (
     <div>
       <Navbar />

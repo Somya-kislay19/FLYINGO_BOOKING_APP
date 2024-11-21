@@ -8,6 +8,7 @@ import FeaturedProperties from "../../components/featuredProperties/FeaturedProp
 import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import Navbarr from "../../components/navbar/Navbar copy";
+import Fp from "../../components/featuredProperties/Fp";
 
 const Home = () =>{
     return(
@@ -19,6 +20,10 @@ const Home = () =>{
     <Featured/>
     <h1 className="homeTitle">Browse by airline Type</h1>
     <FeaturedProperties/>
+    <h1 className="homeTitle">Try our New Features</h1>
+    <Fp/>
+
+
     
    
 <MailList/>

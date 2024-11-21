@@ -8,6 +8,10 @@ const Spicejet = () => {
   const [userDetails, setUserDetails] = useState({});
   const [selectedFlights, setSelectedFlights] = useState([]);
 
+  const v=()=>{
+    navigate("/.vir")
+  }
+
   const flights = [
     {
       id: 1,
@@ -167,6 +171,13 @@ const Spicejet = () => {
                 onClick={() => ahandleAvailabilityClick(flight.id)}
               >
                 See Availability
+              </button>
+
+              <button
+                className='availability-button secondar'
+                onClick={v}
+              >
+                Virtual Tour
               </button>
             </div>
           </div>

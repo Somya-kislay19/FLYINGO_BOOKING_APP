@@ -85,6 +85,12 @@ const taxi=()=>{
 
 }
 
+const tour=()=>{
+  navigate("/tour");
+
+
+}
+
 const visa=()=>{
   navigate("/userinfo");
 
@@ -111,6 +117,10 @@ const hotels=()=>{
           <div className="headerListItem">
             <FontAwesomeIcon icon={faPlane} />
             <button className="btn" onClick={flight}>Flight</button> 
+          </div>
+          <div className="headerListItem">
+            <FontAwesomeIcon icon={faBed} />
+            <button className="btn" onClick={tour}>Tour</button> 
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faCar} />

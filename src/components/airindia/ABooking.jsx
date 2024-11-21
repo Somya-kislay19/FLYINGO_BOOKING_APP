@@ -43,6 +43,13 @@ const Abooking = () => {
         }
     };
 
+    const handleBookNow = () => {
+        navigate("/booking"); 
+      };
+
+      const handleBookvir = () => {
+        navigate("/vir"); 
+      };
     return (
         <div className='l'>
             <Navbar/>
@@ -62,7 +69,12 @@ const Abooking = () => {
                 ))}
             </div>
             
-            <button onClick={handleBooking}>Book Seats</button>
+            <div className="button-container">
+    <button onClick={handleBooking}>Book Seats</button>
+    <button onClick={handleBookNow}>Book In Advance</button>
+    <button onClick={handleBookvir}>Virtual Tour</button>
+
+</div>
         </div>
         </div>
     );

@@ -8,6 +8,10 @@ const AirIndia = () => {
   const [userDetails, setUserDetails] = useState({});
   const [selectedFlights, setSelectedFlights] = useState([]);
 
+ const v=()=>{
+  navigate("/vir")
+ }
+
   const flights = [
     {
       id: 1,
@@ -168,6 +172,14 @@ const AirIndia = () => {
               >
                 See Availability
               </button>
+
+              <button
+                className='availability-button secondar'
+                onClick={v}
+              >
+                Virtual Tour
+              </button>
+              
             </div>
           </div>
         ))}

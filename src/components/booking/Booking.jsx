@@ -28,6 +28,10 @@ const Booking1 = () => {
         }
     };
 
+    const handleBookNow = () => {
+        navigate("/booking");
+      };
+
     const handleBooking = () => {
         if (selectedSeats.length === 0) {
             toast.error("Please select at least one seat.");
@@ -57,7 +61,10 @@ const Booking1 = () => {
                 ))}
             </div>
             
-            <button onClick={handleBooking}>Book Seats</button>
+            <div className="button-container">
+    <button onClick={handleBooking}>Book Seats</button> <p>hi</p>
+    <button onClick={handleBookNow}>Book In Advance</button>
+</div>
         </div>
     );
 };

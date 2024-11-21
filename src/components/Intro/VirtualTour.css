@@ -1,0 +1,56 @@
+.virtual-tour-page {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    background: url('https://source.unsplash.com/1600x900/?airplane,sky') no-repeat center center/cover;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .tour-header {
+    margin-bottom: 30px;
+  }
+  
+  .tour-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tour-header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .image-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .image-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .image-card p {
+    font-size: 14px;
+    color: #333;
+  }
+  

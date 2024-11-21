@@ -3,10 +3,16 @@ import './Indigo.css';
 import { useNavigate } from "react-router-dom";
 import Navbarr from '../navbar/Navbar copy';
 
+
+
 const Indigo = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
   const [selectedFlights, setSelectedFlights] = useState([]);
+  const v=()=>{
+    navigate('./vir')
+  }
+  
 
   const flights = [
     {
@@ -167,6 +173,13 @@ const Indigo = () => {
                 onClick={() => ahandleAvailabilityClick(flight.id)}
               >
                 See Availability
+              </button>
+
+              <button
+                className='availability-button secondar'
+                onClick={v}
+              >
+                Virtual Tour
               </button>
             </div>
           </div>

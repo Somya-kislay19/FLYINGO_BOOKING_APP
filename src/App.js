@@ -62,6 +62,9 @@ import CartPage from "./components/featured/Cart";
 import Success from "./components/CheckoutPage/Wc";
 import Checkout from "./components/CheckoutPage/CheckoutPage";
 import AirportDBPage from "./pages/weather/Taxi";
+import Sure from "./components/Intro/Sure";
+import TourGuide from "./components/Intro/Guide";
+import VirtualTour from "./components/Intro/Virtual";
 
 
 
@@ -85,6 +88,8 @@ const App = () => {
 
         <Route path="/sjb2" element={<Spicejet />} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/vir" element={<VirtualTour/>} />
+
         
 
 
@@ -134,6 +139,8 @@ const App = () => {
         <Route path="/hb" element={<Re />} />
         <Route path="/c" element={<C />} />
 
+        <Route path="/booking" element={<Sure />} />
+
 
         <Route path="/ranchi" element={<RHotel />} />
         <Route path="/ahmedabad" element={<Ahmed />} />
@@ -156,6 +163,8 @@ const App = () => {
 
         <Route path="/flightoptions" element={<Visa />} />
         <Route path="/visaex" element={<Visaex />} />
+        <Route path="/tour" element={<TourGuide/>} />
+
 
         <Route path="/airindia" element={<AirIndia />} />
         <Route path="/spicejet" element={<Spicejet />} />

@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import './Location.css';
 import { useNavigate } from 'react-router-dom';
+import Navbarr from '../../components/navbar/Navbar copy';
 
 const Location = () => {
   const [selectedCity, setSelectedCity] = useState('');
   const navigate = useNavigate();
 
   const destinations = [
-    { name: 'Ranchi', image: 'path_to_ranchi_image', route: '/ranchi' },
-    { name: 'Ahmedabad', image: 'path_to_ahmedabad_image', route: '/ahmedabad' },
-    { name: 'Pune', image: 'path_to_pune_image', route: '/pune' },
-    { name: 'Hyderabad', image: 'path_to_hyderabad_image', route: '/hyderabad' },
-    { name: 'Chennai', image: 'path_to_chennai_image', route: '/chennai' },
-    { name: 'Bangalore', image: 'path_to_bangalore_image', route: '/bangalore' },
-    { name: 'Surat', image: 'path_to_surat_image', route: '/surat' },
-    { name: 'Jamshedpur', image: 'D:\booking\src\pages\location\a.jpg', route: '/jamshedpur' },
-    { name: 'Delhi', image: 'path_to_delhi_image', route: '/delhi' }
+    { name: 'Ranchi', route: '/ranchi' },
+    { name: 'Ahmedabad', route: '/ahmedabad' },
+    { name: 'Pune', route: '/pune' },
+    { name: 'Hyderabad', route: '/hyderabad' },
+    { name: 'Chennai', route: '/chennai' },
+    { name: 'Bangalore', route: '/bangalore' },
+    { name: 'Surat', route: '/surat' },
+    { name: 'Jamshedpur', route: '/jamshedpur' },
+    { name: 'Delhi', route: '/delhi' }
   ];
 
   const handleCityClick = (city, route) => {
@@ -25,6 +26,7 @@ const Location = () => {
 
   return (
     <div className="location-page">
+      <Navbarr/>
       <div className="greet-section">
         <h1>Hello, Welcome to FLYINGO!</h1>
         <h2>What's your destination?</h2>
@@ -38,7 +40,6 @@ const Location = () => {
             className={`carrd ${selectedCity === destination.name ? 'selected' : ''}`}
             onClick={() => handleCityClick(destination.name, destination.route)} 
           >
-            <img src={destination.image} alt={destination.name} className="carrd-image" />
             <div className="city-name">{destination.name}</div>
           </div>
         ))}

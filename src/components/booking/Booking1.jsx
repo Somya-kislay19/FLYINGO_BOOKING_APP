@@ -35,6 +35,9 @@ const Booking1 = () => {
             navigate('/checkout', { state: { selectedSeats } });
         }
     };
+    const handleBookNow = () => {
+        navigate("/booking"); // Pass the selected airline
+      };
 
     return (
         <div className="flight-details1">
@@ -57,7 +60,12 @@ const Booking1 = () => {
                 ))}
             </div>
             
-            <button onClick={handleBooking}>Book Seats</button>
+            <div className="button-container">
+    <button onClick={handleBooking}>Book Seats</button>
+    <button onClick={handleBookNow}>Book In Advance</button>
+</div>
+
+
         </div>
     );
 };
