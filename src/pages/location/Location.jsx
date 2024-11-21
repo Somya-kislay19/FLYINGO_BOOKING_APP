@@ -30,9 +30,9 @@ const Location = () => {
       <div className="greet-section">
         <h1>Hello, Welcome to FLYINGO!</h1>
         <h2>What's your destination?</h2>
-        <p>Select your destination</p>
+        <p>Select your go to destination</p>
       </div>
-      
+
 
 
 
